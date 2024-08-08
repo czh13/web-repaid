@@ -89,6 +89,7 @@
 								font-size: 0.2rem;
 								color: #000;
 								line-height: 0.36rem;
+								cursor: pointer;
 							}
 						}
 

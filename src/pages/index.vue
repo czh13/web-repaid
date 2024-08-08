@@ -1,5 +1,7 @@
 <template>
 	<main>
+		<BusBanner />
+		<BusPay />
 		<BusSolu />
 		<BusCov />
 		<BusAdv />
@@ -9,7 +11,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-	title: 'LEADING PAYMENT SOLUTION PROVIDERBUILD FOR SUCCESS IN GLOBAL MARKETS',
+	title: 'A LEADING PAYMENT SOLUTION PROVIDER BUILD FOR SUCCESS IN EMERGING MARKETS',
 })
 </script>
 
