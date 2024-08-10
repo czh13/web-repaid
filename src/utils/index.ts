@@ -6,20 +6,29 @@ export const getImageUrl = (name: string) => {
 	return assets[`/assets/Images/${name}`] as string
 }
 
-export const setMinHeight = (className: string) => {
-	let boxes = document.querySelectorAll(className) as NodeListOf<HTMLDivElement>
+export const setMinHeight = (boxes: NodeListOf<HTMLDivElement>) => {
 	let maxHeight = 0
 
-	// 计算最高的高度
 	boxes.forEach(function (box) {
 		let boxHeight = box.clientHeight
+
 		if (boxHeight > maxHeight) {
 			maxHeight = boxHeight
 		}
 	})
 
-	// 将所有的div高度设置为最高的高度
 	boxes.forEach(function (box) {
-		box.style.height = maxHeight / 100 + 'rem'
+		box.style.height = maxHeight + 'px'
 	})
+}
+
+export const getScrollTop = (sections: HTMLCollection, sliceNum: number = 0) => {
+	const moduleScrolls = useModuleScrolls()
+	Array.from(sections)
+		.slice(sliceNum)
+		.forEach(sec => {
+			const top = sec.getBoundingClientRect().top
+			const classname = sec.className
+			moduleScrolls.value[classname as keyof typeof moduleScrolls.value] = top
+		})
 }

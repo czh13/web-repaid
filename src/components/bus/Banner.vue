@@ -21,16 +21,16 @@
 <style lang="scss" scoped>
 .Banner {
 	width: 100vw;
-	background: #f7fff8;
+	background: linear-gradient(180deg, #f1fff1 70%, #ffffff);
 	.Banner-main {
-		padding: 195px 0 82px;
+		padding: 1.95rem 0 0.82rem;
 		text-align: center;
 		> h3 {
-			font-size: 60px;
+			font-size: 0.6rem;
 			font-weight: 600;
-			line-height: 72px;
+			line-height: 0.72rem;
 			text-align: center;
-			margin-bottom: 24px;
+			margin-bottom: 0.24rem;
 			color: #000;
 			> span {
 				color: #3ab33b;
@@ -38,9 +38,9 @@
 		}
 		> p {
 			color: #000;
-			font-size: 18px;
+			font-size: 0.18rem;
 			font-weight: 400;
-			line-height: 24px;
+			line-height: 0.24rem;
 			text-align: center;
 		}
 	}

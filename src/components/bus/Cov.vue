@@ -54,19 +54,19 @@ const covs = [
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 120px 0;
+		padding: 1.2rem 0;
 		.title {
 			text-align: center;
-			margin-bottom: 60px;
+			margin-bottom: 0.6rem;
 		}
 		.covs {
 			> div {
 				display: flex;
 				align-items: flex-start;
 				.cov-bgc {
-					width: 480px;
-					height: 416px;
-					border-radius: 8px;
+					width: 4.8rem;
+					height: 4.16rem;
+					border-radius: 0.08rem;
 					cursor: default;
 					overflow: hidden;
 					position: relative;
@@ -82,33 +82,33 @@ const covs = [
 					}
 					.cov-desc {
 						background: #000000cc;
-						padding: 20px 40px 30px;
+						padding: 0.2rem 0.4rem 0.3rem;
 						color: #fff;
 						display: flex;
 						flex-direction: column;
-						gap: 20px;
-						border-radius: 8px;
-						border-top: 8px solid #3ab33b;
+						gap: 0.2rem;
+						border-radius: 0.08rem;
+						border-top: 0.08rem solid #3ab33b;
 						box-sizing: border-box;
 
 						position: absolute;
-						top: 416px;
+						top: 4.16rem;
 						left: 0;
 
 						transition: top 0.3s ease;
 						> p {
-							font-size: 26px;
+							font-size: 0.26rem;
 							font-weight: 500;
-							line-height: 36px;
+							line-height: 0.36rem;
 						}
 						> div {
-							height: 1px;
+							height: 0.01rem;
 							width: 100%;
 							background: #fff;
 						}
 						> span {
-							font-size: 18px;
-							line-height: 28px;
+							font-size: 0.18rem;
+							line-height: 0.28rem;
 						}
 					}
 				}

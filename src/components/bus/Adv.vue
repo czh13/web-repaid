@@ -46,7 +46,8 @@ const advs = [
 	},
 ]
 onMounted(() => {
-	setMinHeight('.advItem')
+	let boxes = document.querySelectorAll('.advItem') as NodeListOf<HTMLDivElement>
+	setMinHeight(boxes)
 })
 </script>
 
@@ -67,39 +68,44 @@ onMounted(() => {
 			align-items: flex-start;
 			gap: 12px;
 			.advItem {
-				border: 1px solid #d1d1d1;
-				border-radius: 12px;
-				padding: 12px 12px 20px;
+				border: 0.01rem solid #d1d1d1;
+				border-radius: 0.12rem;
+				padding: 0.12rem 0.12rem 0.2rem;
 				box-sizing: border-box;
 				box-shadow: 0px 53px 32px 0px #00000005;
-
+				transform: translateY(0);
+				transition: transform 0.2s linear;
+				&:hover {
+					transform: translateY(-0.1rem);
+					transition: transform 0.2s linear;
+				}
 				> img {
-					width: 448px;
-					height: 164px;
+					width: 4.48rem;
+					height: 1.64rem;
 				}
 				> div {
-					margin-left: 28px;
+					margin-left: 0.28rem;
 					> p {
-						font-size: 18px;
+						font-size: 0.18rem;
 						font-weight: 500;
-						line-height: 20px;
-						margin-bottom: 17px;
+						line-height: 0.2rem;
+						margin-bottom: 0.17rem;
 					}
 					> div {
 						display: flex;
 						flex-direction: column;
-						gap: 20px;
+						gap: 0.2rem;
 						> div {
 							display: flex;
 							align-items: center;
-							gap: 8px;
+							gap: 0.08rem;
 							> img {
-								width: 16px;
-								height: 16px;
+								width: 0.16rem;
+								height: 0.16rem;
 							}
 							> span {
-								font-size: 16px;
-								line-height: 19px;
+								font-size: 0.16rem;
+								line-height: 0.19rem;
 								color: #00000099;
 							}
 						}
@@ -107,10 +113,10 @@ onMounted(() => {
 				}
 			}
 			.advItem:nth-of-type(1) {
-				border-radius: 12px 12px 12px 48px;
+				border-radius: 0.12rem 0.12rem 0.12rem 0.48rem;
 			}
 			.advItem:nth-of-type(3) {
-				border-radius: 12px 12px 48px 12px;
+				border-radius: 0.12rem 0.12rem 0.48rem 0.12rem;
 			}
 		}
 	}

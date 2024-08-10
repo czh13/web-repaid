@@ -38,6 +38,8 @@ export default defineNuxtConfig({
 		},
 	},
 
+	modules: ['nuxt-icons'],
+
 	css: ['~/assets/styles/common.scss', '~/assets/styles/reset.scss'],
 
 	vite: {
