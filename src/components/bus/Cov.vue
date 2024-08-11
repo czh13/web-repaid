@@ -26,21 +26,24 @@
 </template>
 
 <script setup lang="ts">
+import CovBgcOne from '@/assets/images/cov_bgc_one.png'
+import CovBgcTwo from '@/assets/images/cov_bgc_two.png'
+import CovBgcThr from '@/assets/images/cov_bgc_thr.png'
 const covs = [
 	{
 		name: 'LATIN AMERICA',
 		text: 'Quickly launch and grow recurring revenue witha unified platform for payments, subscriptions,invoicing, tax, accounting, and more.By 2025, mobile commerce sales in Latin America are expected to make up 55.5% of total retail sales, and sales will be worth almost $107 billion. Online sales are expected to account for 20% of all retail purchases in 2026. Latin Americans are becoming quick adopters of instant and alternative payment methods, with Pix leading the way.',
-		bgcImg: getImageUrl('cov_bgc_one.png'),
+		bgcImg: CovBgcOne,
 	},
 	{
 		name: 'ASIA',
 		text: 'Quickly launch and grow recurring revenue witha unified platform for payments, subscriptions,invoicing, tax, accounting, and more.By 2025, mobile commerce sales in Latin America are expected to make up 55.5% of total retail sales, and sales will be worth almost $107 billion. Online sales are expected to account for 20% of all retail purchases in 2026. Latin Americans are becoming quick adopters of instant and alternative payment methods, with Pix leading the way.',
-		bgcImg: getImageUrl('cov_bgc_two.png'),
+		bgcImg: CovBgcTwo,
 	},
 	{
 		name: 'AFRICA',
 		text: 'Quickly launch and grow recurring revenue witha unified platform for payments, subscriptions,invoicing, tax, accounting, and more.By 2025, mobile commerce sales in Latin America are expected to make up 55.5% of total retail sales, and sales will be worth almost $107 billion. Online sales are expected to account for 20% of all retail purchases in 2026. Latin Americans are becoming quick adopters of instant and alternative payment methods, with Pix leading the way.',
-		bgcImg: getImageUrl('cov_bgc_thr.png'),
+		bgcImg: CovBgcThr,
 	},
 ]
 </script>
