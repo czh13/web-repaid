@@ -4,7 +4,9 @@
 			<div class="pay-tab">
 				<div :class="{ activeTab: currentType === 'ins' }" @click="handleClick('ins')">
 					<div class="pay-icon">
-						<img src="@/assets/images/pay_in_icon.png" alt="" />
+						<div>
+							<NuxtIcon name="pay_in_icon" filled></NuxtIcon>
+						</div>
 					</div>
 					<div class="pay-type">
 						<p>CORE PRODUCT - PAY-INS</p>
@@ -13,7 +15,9 @@
 				</div>
 				<div :class="{ activeTab: currentType === 'outs' }" @click="handleClick('outs')">
 					<div class="pay-icon">
-						<img src="@/assets/images/pay_outs_icon.png" alt="" />
+						<div>
+							<NuxtIcon name="pay_outs_icon" filled></NuxtIcon>
+						</div>
 					</div>
 					<div class="pay-type">
 						<p>CORE PRODUCT - PAYOUTS</p>
@@ -77,10 +81,13 @@ const handleClick = (type: string) => {
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					> img {
+					> div {
 						width: 24px;
 						height: 24px;
 						padding: 15px;
+						:deep(.nuxt-icon svg) {
+							color: #8f8f8f;
+						}
 					}
 				}
 				.pay-type {
@@ -108,6 +115,18 @@ const handleClick = (type: string) => {
 			}
 			.activeTab {
 				border-top: 2px solid rgba(62, 197, 98, 0.8);
+				.pay-icon {
+					> div {
+						:deep(.nuxt-icon svg) {
+							color: #39b54a;
+						}
+					}
+				}
+				.pay-type {
+					> p {
+						color: #000;
+					}
+				}
 			}
 		}
 		.pay-content {

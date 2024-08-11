@@ -10,9 +10,7 @@
 			<div class="advs">
 				<template v-for="adv in advs" :key="adv.title">
 					<div class="advItem">
-						<ClientOnly>
-							<img :src="adv.pic" :alt="adv.title" />
-						</ClientOnly>
+						<img :src="adv.pic" :alt="adv.title" />
 						<div>
 							<p>{{ adv.title }}</p>
 							<div>
@@ -30,20 +28,23 @@
 </template>
 
 <script setup lang="ts">
+import AdvImgOne from '@/assets/images/adv_img_one.png'
+import AdvImgTwo from '@/assets/images/adv_img_two.png'
+import AdvImgThr from '@/assets/images/adv_img_thr.png'
 const advs = [
 	{
 		title: 'INTELLIGENT ACCEPTANCE',
-		pic: getImageUrl('adv_img_one.png'),
+		pic: AdvImgOne,
 		spans: ['Automatic Performance Optimization', 'Combine AI and Big Data to Increase Revenue', 'Provide 24/7 Support'],
 	},
 	{
 		title: 'STABILIZED AND HIGH-STANDARD',
-		pic: getImageUrl('adv_img_two.png'),
+		pic: AdvImgTwo,
 		spans: ['Intelligent Multichannel Routing', 'Safeguarded'],
 	},
 	{
 		title: 'ALL ASPECTS SECURED',
-		pic: getImageUrl('adv_img_thr.png'),
+		pic: AdvImgThr,
 		spans: ['Ultimate Data Encryption', 'Fraud Protection', 'Robust Account Protection'],
 	},
 ]
