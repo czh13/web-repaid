@@ -11,9 +11,9 @@
 				<div>
 					<template v-for="solu in solus" :key="solu.title">
 						<div class="solu-desc">
-							<!-- <img src="@/assets/images/icon.svg" :alt="solu.title" /> -->
-
-							<img :src="solu.icon" :alt="solu.icon" />
+							<div>
+								<NuxtIcon :name="solu.icon" filled></NuxtIcon>
+							</div>
 							<p>{{ solu.title }}</p>
 							<span>{{ solu.spans }}</span>
 						</div>
@@ -29,32 +29,32 @@ const solus = [
 	{
 		title: 'LATIN AMERICA',
 		spans: 'A valuable resource for students improving their design skills and understanding design systems.',
-		icon: getImageUrl('icon.svg'),
+		icon: 'solu_icon_one',
 	},
 	{
 		title: 'LATIN AMERICA',
 		spans: 'A valuable resource for students improving their design skills and understanding design systems.',
-		icon: getImageUrl('solu_icon_one.png'),
+		icon: 'solu_icon_two',
 	},
 	{
 		title: 'LATIN AMERICA',
 		spans: 'A valuable resource for students improving their design skills and understanding design systems.',
-		icon: getImageUrl('solu_icon_one.png'),
+		icon: 'solu_icon_thr',
 	},
 	{
 		title: 'LATIN AMERICA',
 		spans: 'A valuable resource for students improving their design skills and understanding design systems.',
-		icon: getImageUrl('solu_icon_one.png'),
+		icon: 'solu_icon_four',
 	},
 	{
 		title: 'LATIN AMERICA',
 		spans: 'A valuable resource for students improving their design skills and understanding design systems.',
-		icon: getImageUrl('solu_icon_one.png'),
+		icon: 'solu_icon_five',
 	},
 	{
 		title: 'LATIN AMERICA',
 		spans: 'A valuable resource for students improving their design skills and understanding design systems.',
-		icon: getImageUrl('solu_icon_one.png'),
+		icon: 'solu_icon_six',
 	},
 ]
 </script>
@@ -76,16 +76,28 @@ const solus = [
 				display: grid;
 				grid-template-columns: repeat(3, 480px);
 				grid-template-rows: repeat(2, 1fr);
-				// width: 480px;
 				.solu-desc {
 					display: flex;
 					flex-direction: column;
 					padding: 42px 0 20px 45px;
 					border: 1px solid #eee;
 					box-sizing: border-box;
-					> img {
+					&:hover {
+						background: #39b54a;
+						cursor: pointer;
+						color: #fff;
+						> div {
+							:deep(.nuxt-icon svg) {
+								color: #fff;
+							}
+						}
+					}
+					> div {
 						width: 32px;
 						height: 32px;
+						:deep(.nuxt-icon svg) {
+							color: #39b54a;
+						}
 					}
 					> p {
 						font-size: 20px;

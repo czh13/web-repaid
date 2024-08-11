@@ -1,4 +1,3 @@
-import { useModuleScrolls } from '../composables/useStore';
 <template>
 	<main ref="mainRef">
 		<BusBanner />
