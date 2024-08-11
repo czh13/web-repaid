@@ -11,7 +11,9 @@
 				<div>
 					<template v-for="cov in covs" :key="cov.name">
 						<div class="cov-bgc">
-							<img :src="cov.bgcImg" :alt="cov.name" />
+							<ClientOnly>
+								<img :src="cov.bgcImg" :alt="cov.name" />
+							</ClientOnly>
 							<div class="cov-desc">
 								<p>{{ cov.name }}</p>
 								<div></div>

@@ -10,7 +10,9 @@
 			<div class="advs">
 				<template v-for="adv in advs" :key="adv.title">
 					<div class="advItem">
-						<img :src="adv.pic" :alt="adv.title" />
+						<ClientOnly>
+							<img :src="adv.pic" :alt="adv.title" />
+						</ClientOnly>
 						<div>
 							<p>{{ adv.title }}</p>
 							<div>
