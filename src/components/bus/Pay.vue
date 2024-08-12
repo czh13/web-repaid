@@ -1,6 +1,11 @@
 <template>
 	<section class="pay">
 		<div class="pay-main">
+			<p class="pay-title">
+				Payment Solutions
+				<span>Across Industries and</span>
+				Requirements
+			</p>
 			<div class="pay-tab">
 				<div :class="{ activeTab: currentType === 'ins' }" @click="handleClick('ins')">
 					<div class="pay-icon">
@@ -40,7 +45,6 @@ const handleClick = (type: string) => {
 
 	nextTick(() => {
 		const content = document.querySelector('.pay-content')
-		console.log('🚀 ~ handleClick ~ content:', content?.getBoundingClientRect())
 		const moduleScrolls = useModuleScrolls()
 		for (const key in moduleScrolls.value) {
 			moduleScrolls.value[key] = moduleScrolls.value[key] + 700
@@ -56,8 +60,20 @@ const handleClick = (type: string) => {
 	flex-direction: column;
 	align-items: center;
 	.pay-main {
-		max-width: 1620px;
+		max-width: 16.2rem;
 		width: 100%;
+		.pay-title {
+			font-family: Alibaba PuHuiTi 2;
+			font-size: 0.4rem;
+			font-weight: 600;
+			line-height: 0.64rem;
+			text-align: center;
+			padding: 0.38rem 0;
+			color: #3ab33b;
+			> span {
+				color: #000;
+			}
+		}
 		.pay-tab {
 			display: flex;
 			align-items: center;
@@ -68,12 +84,12 @@ const handleClick = (type: string) => {
 				justify-content: center;
 
 				gap: 20px;
-				padding: 40px 0;
-				border: 1px solid #eeeeee;
-				border-top: 2px solid #eee;
+				padding: 0.4rem 0;
+				border: 0.01rem solid #eeeeee;
+				border-top: 0.02rem solid #eee;
 				box-sizing: border-box;
 				.pay-icon {
-					border: 1px solid #eeeeee;
+					border: 0.01rem solid #eeeeee;
 					border-radius: 50%;
 					box-shadow: 0px 0px 0px 1px #ebebeb;
 					box-shadow: 0px 1.33px 4px 0px #8f8f8f33;
@@ -82,9 +98,9 @@ const handleClick = (type: string) => {
 					align-items: center;
 					justify-content: center;
 					> div {
-						width: 24px;
-						height: 24px;
-						padding: 15px;
+						width: 0.24rem;
+						height: 0.24rem;
+						padding: 0.15rem;
 						:deep(.nuxt-icon svg) {
 							color: #8f8f8f;
 						}
@@ -93,32 +109,32 @@ const handleClick = (type: string) => {
 				.pay-type {
 					display: flex;
 					flex-direction: column;
-					gap: 6px;
+					gap: 0.06rem;
 					cursor: pointer;
 					> p {
-						font-size: 20px;
+						font-size: 0.2rem;
 						font-weight: 500;
-						line-height: 26px;
+						line-height: 0.26rem;
 						color: #8f8f8f;
 					}
 					> span {
-						font-size: 16px;
+						font-size: 0.16rem;
 						font-weight: 400;
-						line-height: 20px;
+						line-height: 0.2rem;
 						color: #8f8f8f;
 						white-space: nowrap;
 					}
 				}
 			}
 			> div:nth-of-type(2) {
-				margin-left: -1px;
+				margin-left: -0.01rem;
 			}
 			.activeTab {
-				border-top: 2px solid rgba(62, 197, 98, 0.8);
+				border-top: 0.02rem solid rgba(62, 197, 98, 0.8);
 				.pay-icon {
 					> div {
 						:deep(.nuxt-icon svg) {
-							color: #39b54a;
+							color: #3ab33b;
 						}
 					}
 				}
@@ -130,25 +146,25 @@ const handleClick = (type: string) => {
 			}
 		}
 		.pay-content {
-			width: calc(100% - 2px);
+			width: calc(100% - 0.02rem);
 			height: 0;
-			border-left: 1px solid #eeeeee;
-			border-right: 1px solid #eeeeee;
+			border-left: 0.01rem solid #eeeeee;
+			border-right: 0.01rem solid #eeeeee;
 			overflow: hidden;
 			transition: height 0.5s ease;
 			box-sizing: border-box;
 			> div {
 				box-shadow: 0px 22px 49px 0px #3030300f;
-				padding: 36px 122px;
-				border-radius: 16px;
+				padding: 0.36rem 1.22rem;
+				border-radius: 0.16rem;
 				height: 100%;
 				box-sizing: border-box;
 			}
 		}
 
 		.activeHeight {
-			height: 700px;
-			padding: 30px;
+			height: 7rem;
+			padding: 0.3rem;
 		}
 	}
 }

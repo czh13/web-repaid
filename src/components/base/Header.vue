@@ -11,7 +11,7 @@
 						</div>
 					</template>
 				</div>
-				<div class="contactBtn">
+				<div class="contactBtn" @click="handleTab('about')">
 					<div></div>
 					<div class="contact">Contact Us</div>
 				</div>
@@ -40,6 +40,8 @@ const handleScroll = () => {
 
 const handleTab = (module: string) => {
 	const moduleScrolls = useModuleScrolls()
+	console.log('🚀 ~ handleTab ~ moduleScrolls:', moduleScrolls.value[module])
+
 	window.scrollTo({
 		top: moduleScrolls.value[module],
 		behavior: 'smooth',
@@ -98,7 +100,7 @@ onUnmounted(() => {
 					position: relative;
 					&:hover {
 						.title-text {
-							color: #39b54a;
+							color: #3ab33b;
 						}
 						.title-solid {
 							display: block;
@@ -119,14 +121,14 @@ onUnmounted(() => {
 						display: none;
 						width: 100%;
 						border-radius: 0.02rem;
-						background: #39b54a;
+						background: #3ab33b;
 					}
 				}
 			}
 			.contactBtn {
 				.contact {
 					cursor: pointer;
-					background: #39b54a;
+					background: #3ab33b;
 					font-family: PingFang SC;
 					font-size: 0.14rem;
 					font-weight: 500;

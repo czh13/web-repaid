@@ -32,17 +32,17 @@ import CovBgcThr from '@/assets/images/cov_bgc_thr.png'
 const covs = [
 	{
 		name: 'LATIN AMERICA',
-		text: 'Quickly launch and grow recurring revenue witha unified platform for payments, subscriptions,invoicing, tax, accounting, and more.By 2025, mobile commerce sales in Latin America are expected to make up 55.5% of total retail sales, and sales will be worth almost $107 billion. Online sales are expected to account for 20% of all retail purchases in 2026. Latin Americans are becoming quick adopters of instant and alternative payment methods, with Pix leading the way.',
+		text: 'Spurred by growing demand for online banking solutions, favorable demographics, and a large underserved population, fintech activity is expanding in Latin America. Latin America has about 450 million mobile phone subscribers and is expected to reach 484 million by 2025. Of those 450 million users, nearly 80% access the Internet through mobile phones. Brazil contributes about 42% of B2C retail transactions in Latin America. Due to the rise of new banks, e-wallets, etc., the increasing demand by consumers and businesses is driving the growth of digital payments and the relevant solutions.',
 		bgcImg: CovBgcOne,
 	},
 	{
 		name: 'ASIA',
-		text: 'Quickly launch and grow recurring revenue witha unified platform for payments, subscriptions,invoicing, tax, accounting, and more.By 2025, mobile commerce sales in Latin America are expected to make up 55.5% of total retail sales, and sales will be worth almost $107 billion. Online sales are expected to account for 20% of all retail purchases in 2026. Latin Americans are becoming quick adopters of instant and alternative payment methods, with Pix leading the way.',
+		text: 'With 77% of Asian consumers choosing to shop on their mobile phones, the highest percentage in the world, these groups are also placing higher demands on new payment solutions. With its demographic dividend and open market, the Philippines offers more possibilities for emerging digital payments. As the Covid-19 has changed the habits of Filipinos and more people are are open to digital banking, the adoption and use of GCash solutions has surged.',
 		bgcImg: CovBgcTwo,
 	},
 	{
 		name: 'AFRICA',
-		text: 'Quickly launch and grow recurring revenue witha unified platform for payments, subscriptions,invoicing, tax, accounting, and more.By 2025, mobile commerce sales in Latin America are expected to make up 55.5% of total retail sales, and sales will be worth almost $107 billion. Online sales are expected to account for 20% of all retail purchases in 2026. Latin Americans are becoming quick adopters of instant and alternative payment methods, with Pix leading the way.',
+		text: "In 2022, African e-commerce turnover was about $32.5 billion, and it is expected to rise to $60 billion by 2027. The number of e-commerce consumers is expected to increase from 388 million in 2022 to 610 million in 2027. With the development of diversified payment methods, the digital payment industry in Africa will be more dynamic. Nigeria's emergence as a country with the fintech sector has its unique social context and is as indispensable as government support for the digital economy. As Africa's largest economy, Nigeria has actively promoted the diversification of its economic structure, and regards the digital economy as the future of sustainable economic growth",
 		bgcImg: CovBgcThr,
 	},
 ]

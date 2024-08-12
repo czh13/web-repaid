@@ -2,10 +2,10 @@
 	<section class="Banner">
 		<div class="Banner-main">
 			<h3>
-				A LEADING PAYMENT SOLUTION PROVIDER
+				<span>Repaid,</span>
+				a secure, convenient and efficient
 				<br />
-				BUILD FOR
-				<span>SUCCESS IN EMERGING MARKETS</span>
+				payment experience
 			</h3>
 			<p>
 				Repaid sees a gap in the payments industry in emerging markets. Repaid brings safe, convenient and efficient solutions and payment products.

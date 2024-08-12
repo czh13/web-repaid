@@ -61,15 +61,15 @@ onMounted(() => {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 120px 0;
+		padding: 1.2rem 0;
 		.title {
 			text-align: center;
-			margin-bottom: 60px;
+			margin-bottom: 0.6rem;
 		}
 		.advs {
 			display: flex;
 			align-items: flex-start;
-			gap: 12px;
+			gap: 0.12rem;
 			.advItem {
 				border: 0.01rem solid #d1d1d1;
 				border-radius: 0.12rem;

@@ -18,7 +18,7 @@ export const setMinHeight = (boxes: NodeListOf<HTMLDivElement>) => {
 	})
 
 	boxes.forEach(function (box) {
-		box.style.height = maxHeight + 'px'
+		box.style.height = maxHeight / 100 + 'rem'
 	})
 }
 
