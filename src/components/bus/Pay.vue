@@ -31,7 +31,19 @@
 				</div>
 			</div>
 			<div class="pay-content" :class="{ activeHeight: !!currentType }">
-				<div></div>
+				<div>
+					<div class="spans">
+						<span>Increase acceptance rates automatically with Repaid formatting payments to fit the preferences of each merchant and customer</span>
+						<span>
+							Strive local business and diversified payment methods. Receive payments in local currencies, settle funds fast, and gain valuable insights
+						</span>
+						<span>Fast payout methods to transform customer local payment experiences</span>
+					</div>
+					<div class="shows">
+						<img src="@/assets/images/pay-code.png" alt="" />
+						<img src="@/assets/images/pay-cashier.png" alt="" />
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -154,11 +166,41 @@ const handleClick = (type: string) => {
 			transition: height 0.5s ease;
 			box-sizing: border-box;
 			> div {
-				box-shadow: 0px 22px 49px 0px #3030300f;
-				padding: 0.36rem 1.22rem;
+				box-shadow: 0 0 49px 0px #3030300f;
+				padding: 0.36rem 0.52rem;
 				border-radius: 0.16rem;
 				height: 100%;
 				box-sizing: border-box;
+				display: flex;
+				gap: 44px;
+				.spans {
+					padding: 0.63rem 0;
+					display: flex;
+					flex-direction: column;
+					gap: 0.5rem;
+					> span {
+						font-family: Alibaba PuHuiTi 2;
+						font-size: 0.24rem;
+						font-weight: 400;
+						line-height: 0.38rem;
+						color: #8f8f8f;
+					}
+				}
+				.shows {
+					position: relative;
+					> img:nth-of-type(1) {
+						width: 6.88rem;
+						height: 3.44rem;
+					}
+					> img:nth-of-type(2) {
+						position: absolute;
+						z-index: 10;
+						right: -0.9rem;
+						bottom: 0;
+						width: 2.72rem;
+						height: 4.75rem;
+					}
+				}
 			}
 		}
 

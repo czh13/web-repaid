@@ -17,10 +17,12 @@ useSeoMeta({
 
 const mainRef = ref<HTMLElement | null>(null)
 onMounted(() => {
-	if (mainRef.value) {
-		const sections = mainRef.value.children
-		getScrollTop(sections, 2)
-	}
+	nextTick(() => {
+		if (mainRef.value) {
+			const sections = mainRef.value.children
+			getScrollTop(sections, 2)
+		}
+	})
 })
 </script>
 

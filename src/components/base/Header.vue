@@ -40,8 +40,6 @@ const handleScroll = () => {
 
 const handleTab = (module: string) => {
 	const moduleScrolls = useModuleScrolls()
-	console.log('🚀 ~ handleTab ~ moduleScrolls:', moduleScrolls.value[module])
-
 	window.scrollTo({
 		top: moduleScrolls.value[module],
 		behavior: 'smooth',
