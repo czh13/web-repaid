@@ -3,7 +3,7 @@
 		<div class="adv-main">
 			<div class="title">
 				<BaseTitleMain>
-					<template #one>Our Advantages</template>
+					<template #one>Advantages</template>
 					<template #two>Global opportunities through professional localization</template>
 				</BaseTitleMain>
 			</div>
@@ -35,7 +35,7 @@ const advs = [
 	{
 		title: 'INTELLIGENT ACCEPTANCE',
 		pic: AdvImgOne,
-		spans: ['Automatic Performance Optimization', 'Combine AI and Big Data to Increase Revenue', 'Provide 24/7 Support'],
+		spans: ['Periodic system and performance optimization', 'Combine AI and Big Data to Increase Revenue', 'Provide 24/7 Support'],
 	},
 	{
 		title: 'STABILIZED AND HIGH-STANDARD',
@@ -73,7 +73,7 @@ onMounted(() => {
 			.advItem {
 				border: 0.01rem solid #d1d1d1;
 				border-radius: 0.12rem;
-				padding: 0.12rem 0.12rem 0.2rem;
+				padding: 0.12rem;
 				box-sizing: border-box;
 				box-shadow: 0px 53px 32px 0px #00000005;
 				transform: translateY(0);
@@ -109,7 +109,7 @@ onMounted(() => {
 							> span {
 								font-size: 0.16rem;
 								line-height: 0.19rem;
-								color: #00000099;
+								color: #8f8f8f;
 							}
 						}
 					}
@@ -120,6 +120,54 @@ onMounted(() => {
 			}
 			.advItem:nth-of-type(3) {
 				border-radius: 0.12rem 0.12rem 0.48rem 0.12rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+	.adv {
+		.adv-main {
+			padding: 0.6rem 0.16rem;
+			.title {
+				margin-bottom: 0.4rem;
+			}
+			.advs {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0.12rem;
+				.advItem {
+					border: 0.01rem solid #d1d1d1;
+					border-radius: 0.12rem;
+					padding: 0.08rem;
+					height: 100% !important;
+					> img {
+						width: 3.26rem;
+						height: 1.23rem;
+					}
+					> div {
+						margin-left: 0.22rem;
+						margin-bottom: 0.22rem;
+						> div {
+							> div {
+								display: flex;
+								align-items: flex-start;
+								gap: 0.08rem;
+								> img {
+									width: 0.16rem;
+									height: 0.16rem;
+								}
+							}
+						}
+					}
+				}
+				.advItem:nth-of-type(1) {
+					border-radius: 0.12rem;
+				}
+				.advItem:nth-of-type(3) {
+					border-radius: 0.12rem;
+				}
 			}
 		}
 	}

@@ -15,7 +15,12 @@
 								<NuxtIcon :name="solu.icon" filled></NuxtIcon>
 							</div>
 							<p>{{ solu.title }}</p>
+							<span>{{ solu.sec }}</span>
 							<span>{{ solu.spans }}</span>
+							<div class="solu-box solu-topleft"></div>
+							<div class="solu-box solu-topright"></div>
+							<div class="solu-box solu-bottomleft"></div>
+							<div class="solu-box solu-bottomright"></div>
 						</div>
 					</template>
 				</div>
@@ -28,32 +33,38 @@
 const solus = [
 	{
 		title: 'E-commerce',
-		spans: `Enhance your customers' shopping experience through integrated payment solutions`,
+		sec: 'Retail, fashion, consumer goods, digital services',
+		spans: `For ecommerce offers intuitive software, international capabilities and innovative protection`,
 		icon: 'solu_icon_one',
 	},
 	{
 		title: 'Digital media, entertainment',
-		spans: 'Seamlessly embrace global payments with versatile online checkout',
+		sec: 'Online entertainment, live streaming',
+		spans: 'Diverse and localized payment methods. Provide a online and mobile checkout experience',
 		icon: 'solu_icon_two',
 	},
 	{
-		title: 'Gaming',
-		spans: 'Sports, esports, game streaming, virtual reality, simulation gaming',
+		title: 'Online gaming',
+		sec: 'Sports, e-sports, streaming, VR, simulation game',
+		spans: 'The expertise and processing capabilities to allow gaming companies to make the right business decisions',
 		icon: 'solu_icon_thr',
 	},
 	{
-		title: 'Payment Facilitators',
-		spans: 'Local entities to process payments in different countries.',
+		title: 'Finance facilitators',
+		sec: 'Fintech and financial service providers',
+		spans: 'Subscription or software platforms with Repaid Integrated Payments solution that supports you at scale',
 		icon: 'solu_icon_four',
 	},
 	{
-		title: 'Payroll',
-		spans: 'Scale effortlessly with competitive, real-time payments, and direct debit options',
+		title: 'Payroll and rewards',
+		sec: 'Local firm payroll, divide accounts and the profits',
+		spans: 'Optimal performance, fast settlement to delight your customers and partners',
 		icon: 'solu_icon_five',
 	},
 	{
-		title: 'Students',
-		spans: 'A valuable resource for students improving their design skills and understanding design systems.',
+		title: 'Cryptos and exchange',
+		sec: 'Exchanges and wallets',
+		spans: 'Full flexibility, get paid in fiat and settled in stablecoin. The funding flows are built for your needs no matter where you are in the world',
 		icon: 'solu_icon_six',
 	},
 ]
@@ -72,18 +83,27 @@ const solus = [
 			margin-bottom: 0.6rem;
 		}
 		.solus {
-			max-width: 14.54rem;
 			width: 100%;
+			position: relative;
+			width: 100vw;
+			border: 0.01rem solid #eee;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			> div {
 				display: grid;
-				grid-template-columns: repeat(3, 1fr);
+				grid-template-columns: repeat(3, 4.8rem);
 				grid-template-rows: repeat(2, 1fr);
+
 				.solu-desc {
 					display: flex;
 					flex-direction: column;
 					padding: 0.42rem 0 0.2rem 0.45rem;
 					border: 0.01rem solid #eee;
 					box-sizing: border-box;
+					position: relative;
+					border-bottom: none;
+					border-top: none;
 					&:hover {
 						background: #3ab33b;
 						cursor: pointer;
@@ -109,11 +129,88 @@ const solus = [
 					}
 					> span {
 						font-size: 0.18rem;
-						font-weight: 400;
+						font-weight: 300;
 						line-height: 26x;
 						margin-top: 0.2rem;
 					}
+
+					.solu-box {
+						width: 0.12rem;
+						height: 0.12rem;
+						border: 0.01rem solid #ebebeb;
+						position: absolute;
+						z-index: 11;
+						background: #fff;
+					}
+					.solu-topleft {
+						top: -0.07rem;
+						left: -0.07rem;
+					}
+					.solu-topright {
+						top: -0.07rem;
+						right: -0.09rem;
+					}
+					.solu-bottomleft {
+						bottom: -0.07rem;
+						left: -0.07rem;
+					}
+					.solu-bottomright {
+						bottom: -0.07rem;
+						right: -0.09rem;
+					}
 				}
+			}
+		}
+		.solus::after {
+			content: '';
+			display: block;
+			height: 0.01rem;
+			width: 100%;
+			background: #eee;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+	.solu {
+		.solu-main {
+			padding: 0.6rem 0.16rem;
+			.title {
+				margin-bottom: 0.4rem;
+			}
+			.solus {
+				width: 100%;
+				position: relative;
+				border: 0.01rem solid #eee;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				> div {
+					display: flex;
+					flex-direction: column;
+
+					grid-template-columns: repeat(3, 4.8rem);
+					grid-template-rows: repeat(2, 1fr);
+
+					.solu-desc {
+						display: flex;
+						flex-direction: column;
+						padding: 0.24rem;
+						border: 0.01rem solid #eee;
+						border-bottom: 0.01rem solid #eee;
+						border-top: 0.01rem solid #eee;
+
+						.solu-box {
+							display: none;
+						}
+					}
+				}
+			}
+			.solus::after {
+				display: none;
 			}
 		}
 	}

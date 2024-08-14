@@ -4,9 +4,9 @@
 			<BaseTitleMain>
 				<template #one>Our Mission</template>
 				<template #two>
-					Helping your business thrive in the
+					Helping your digital economy
 					<br />
-					digital economy
+					business
 				</template>
 			</BaseTitleMain>
 			<div class="mission-content">
@@ -20,7 +20,7 @@
 				</div>
 				<div>
 					<img src="@/assets/images/dash.png" alt="" />
-					<span>Always Strive Secure And Stable</span>
+					<span>Always Long-term Planning, Fast Landing</span>
 				</div>
 			</div>
 		</div>
@@ -31,6 +31,7 @@
 
 <style lang="scss" scoped>
 .mission {
+	width: 100vw;
 	background: url('~/assets/images/mission_bgc.png');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -55,6 +56,33 @@
 					font-size: 0.22rem;
 					font-weight: 400;
 					line-height: 0.3rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+	.mission {
+		background: url('~/assets/images/mission_bgc_phone.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+		padding: 0.86rem 0 0.54rem 0.64rem;
+		.mission-main {
+			.mission-content {
+				gap: 0.2rem;
+				> div {
+					gap: 0.1rem;
+					> img {
+						width: 0.2rem;
+						height: 0.2rem;
+					}
+					> span {
+						font-size: 0.14em;
+						font-weight: 400;
+						line-height: 0.32rem;
+					}
 				}
 			}
 		}

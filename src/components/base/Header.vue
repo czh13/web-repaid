@@ -3,7 +3,7 @@
 		<div class="header-main">
 			<img src="@/assets/images/logo.png" alt="" />
 			<nav>
-				<div class="navs">
+				<div class="navs" :class="{ showNavs: !isShowTab }">
 					<template v-for="nav in navs" :key="nav.title">
 						<div @click="handleTab(nav.path)">
 							<div class="title-text">{{ nav.title }}</div>
@@ -11,9 +11,9 @@
 						</div>
 					</template>
 				</div>
-				<div class="contactBtn" @click="handleTab('about')">
-					<div></div>
-					<div class="contact">Contact Us</div>
+				<div class="contactBtn">
+					<div class="contact" @click="handleTab('about')">Contact Us</div>
+					<img src="@/assets/images/header_tab_icon.png" alt="" @click="handlShow" />
 				</div>
 			</nav>
 		</div>
@@ -31,19 +31,26 @@ const navs = [
 
 const isLeaveTop = ref(false)
 const lastScrollTop = ref(0)
+const isShowTab = ref(false)
 
 const handleScroll = () => {
 	const currentScroll = window.pageYOffset || document.documentElement.scrollTop
 	isLeaveTop.value = currentScroll > lastScrollTop.value && currentScroll > 112
 	lastScrollTop.value = currentScroll <= 0 ? 0 : currentScroll
+	isShowTab.value = false
 }
 
 const handleTab = (module: string) => {
+	isShowTab.value = false
 	const moduleScrolls = useModuleScrolls()
 	window.scrollTo({
 		top: moduleScrolls.value[module],
 		behavior: 'smooth',
 	})
+}
+
+const handlShow = () => {
+	isShowTab.value = !isShowTab.value
 }
 
 onMounted(() => {
@@ -134,6 +141,75 @@ onUnmounted(() => {
 					color: #fff;
 					border-radius: 0.08rem;
 					white-space: nowrap;
+				}
+				> img {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+	.header {
+		z-index: 99;
+		.header-main {
+			max-width: 100vw;
+			gap: 0.5rem;
+			padding: 0.12rem 0 0.12rem 0.48rem;
+			> img {
+				width: 1.48rem;
+				height: 0.32rem;
+			}
+			> nav {
+				flex: 1;
+				align-items: center;
+				justify-content: normal;
+
+				.showNavs {
+					display: none;
+				}
+				.navs {
+					gap: 0.4rem;
+					padding: 0.2rem 0.16rem;
+
+					box-sizing: border-box;
+					position: fixed;
+					top: 61px;
+					left: 0;
+					z-index: 66;
+					width: 100vw;
+					height: 100vh;
+					background: rgba(241, 255, 241);
+					flex-direction: column;
+					transition: height 0.2s ease;
+					> div {
+						position: relative;
+						.title-text {
+							font-size: 0.14rem;
+							line-height: 0.2rem;
+							padding: 0.06rem 0;
+						}
+						.title-solid {
+							display: none;
+						}
+					}
+				}
+				.contactBtn {
+					display: flex;
+					align-items: center;
+					gap: 0.15rem;
+					.contact {
+						font-size: 0.14rem;
+						font-weight: 400;
+						padding: 0.08rem 0.06rem;
+						border-radius: 0.08rem;
+					}
+					> img {
+						display: block;
+						width: 0.24rem;
+						height: 0.24rem;
+					}
 				}
 			}
 		}

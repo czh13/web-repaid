@@ -6,20 +6,18 @@
 					<img src="~/assets/images/logo.png" alt="logo" />
 					<div class="items">
 						<div class="legal">
-							<div>Legal</div>
-							<div>
-								<p>Privacy</p>
-								<p>Terms of Service</p>
-							</div>
+							<span>Legal</span>
+							<NuxtLink to="/">Privacy</NuxtLink>
+							<NuxtLink to="/">Terms of Service</NuxtLink>
 						</div>
 						<div class="questions">
-							<div>General questions</div>
-							<div>
-								<p>business@repaidlimits.com</p>
-							</div>
+							<span>General questions</span>
+							<p>info@repaidhq.com</p>
+							<span>Want to partner with us?</span>
+							<p>business@repaidhq.com</p>
 						</div>
 						<div class="follow">
-							<div>Follow Us</div>
+							<span>Follow Us</span>
 							<div class="follow-qrcode">
 								<div>
 									<img src="@/assets/images/fakecode.png" alt="" />
@@ -39,16 +37,9 @@
 				</div>
 				<div class="footer-tip">
 					<div>
-						<p>© C 2024 Repaid Limits. All rights reserved</p>
+						<p>© 2024 Repaid Headquarter all rights reserved</p>
 						<p>Registered at XXXXXXXXXXXXXX</p>
 					</div>
-					<p>
-						Repaid, operates as a licensed third-party payment institution. Our premier product, Repaid, represents an innovative solution for global payments,
-						specifically tailored to deliver efficient and secure localized payment services to our esteemed business clients worldwide. Through Repaid, our
-						steadfast commitment lies in eliminating payment barriers that exist between businesses and users across diverse countries and regions, thereby
-						facilitating seamless business expansion and fostering sustainable growth opportunities for our valued clients. We are a global company with a
-						presence in Latin America, Aisa, and Africa.
-					</p>
 				</div>
 			</div>
 		</div>
@@ -69,23 +60,23 @@
 		flex-direction: column;
 		align-items: center;
 		> div {
-			max-width: 10.8rem;
+			max-width: 16rem;
 			width: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			gap: 0.6rem;
-			padding: 0.94rem 0 0.4rem;
+			gap: 0.8rem;
+			padding: 0.96rem 0 0.4rem;
 			.footer-tab {
 				width: 100%;
 				display: flex;
 				align-items: flex-start;
 				justify-content: space-between;
 
-				gap: 0.7rem;
+				gap: 0.9rem;
 				> img {
-					width: 1.66rem;
-					height: 0.36rem;
+					width: 2.5rem;
+					height: 0.6rem;
 				}
 
 				.items {
@@ -96,38 +87,39 @@
 					> div {
 						display: flex;
 						flex-direction: column;
-						gap: 0.2rem;
-						> div:nth-of-type(1) {
-							font-size: 0.12rem;
+						gap: 0.32rem;
+						> span {
+							font-size: 0.18rem;
 							color: #999;
-							line-height: 0.24rem;
+							line-height: 0.32rem;
 						}
-						> div:nth-of-type(2) {
-							display: flex;
-							flex-direction: column;
-							gap: 0.16rem;
-							> p {
-								font-size: 0.13rem;
-								color: #000;
-								line-height: 0.23rem;
-								cursor: pointer;
-							}
+						> p {
+							font-size: 0.18rem;
+							color: #000;
+							line-height: 0.32rem;
 						}
-
+						> a {
+							font-size: 0.18rem;
+							color: #000;
+							line-height: 0.32rem;
+							cursor: pointer;
+						}
 						.follow-qrcode {
 							display: flex;
 							flex-direction: row !important;
 							align-items: center;
+							gap: 0.47rem;
 							> div {
 								display: flex;
 								flex-direction: column;
+								align-items: center;
 								gap: 0.1rem;
 								> img {
-									width: 1.02rem;
-									height: 1.02rem;
+									width: 1.52rem;
+									height: 1.52rem;
 								}
 								> span {
-									font-size: 0.12rem;
+									font-size: 0.14rem;
 									color: #999999;
 								}
 							}
@@ -154,6 +146,73 @@
 					font-size: 0.12rem;
 					line-height: 0.23rem;
 					color: #999;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+	.footer {
+		.footer-main {
+			padding: 0 0.16rem;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			> div {
+				max-width: 100vw;
+				gap: 0.2rem;
+				padding: 0.4rem 0 0.4rem;
+				.footer-tab {
+					flex-direction: column;
+					align-items: center;
+					justify-content: normal;
+
+					gap: 0.2rem;
+					> img {
+						width: 1.66rem;
+						height: 0.36rem;
+					}
+
+					.items {
+						flex: none;
+						display: flex;
+						flex-wrap: wrap;
+						> div {
+							gap: 0.08rem;
+							> span {
+								font-size: 0.14rem;
+								line-height: 0.24rem;
+							}
+							> p {
+								font-size: 0.14rem;
+								line-height: 0.24rem;
+							}
+							> a {
+								font-size: 0.14rem;
+								line-height: 0.24rem;
+							}
+							.follow-qrcode {
+								gap: 0.17rem;
+								> div {
+									gap: 0.1rem;
+									> img {
+										width: 1.02rem;
+										height: 1.02rem;
+									}
+									> span {
+										font-size: 0.12rem;
+									}
+								}
+							}
+						}
+					}
+				}
+				.footer-tip {
+					> div {
+						flex-direction: column;
+					}
 				}
 			}
 		}

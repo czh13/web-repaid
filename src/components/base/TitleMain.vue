@@ -30,4 +30,18 @@
 		font-weight: 400;
 	}
 }
+
+@media (min-width: 375px) and (max-width: 767px) {
+	.titleMain {
+		gap: 0.2rem;
+		.one {
+			font-size: 0.28rem;
+			line-height: 0.32rem;
+		}
+		.two {
+			font-size: 0.2rem;
+			line-height: 0.28rem;
+		}
+	}
+}
 </style>

@@ -4,7 +4,7 @@
 			<div class="title">
 				<BaseTitleMain>
 					<template #one>About Us</template>
-					<template #two>Interested to learn what we can do for your business?</template>
+					<template #two>Interested to learn more about what Repaid can do for your business?</template>
 				</BaseTitleMain>
 			</div>
 			<div class="contact">
@@ -12,29 +12,29 @@
 				<div>
 					<div>
 						<h3>
-							Our Team Can Help
-							<span>You</span>
+							<span>Repaid</span>
+							offers
 						</h3>
 						<div class="items">
 							<div>
 								<img src="@/assets/images/about_icon_one.png" alt="" />
-								<span>Demo products of interest</span>
+								<span>Payment Products Demonstration</span>
 							</div>
 							<div>
 								<img src="@/assets/images/about_icon_two.png" alt="" />
-								<span>Design a solution to accept and optimize payments.</span>
+								<span>Design customized solutions to optimize payment performance</span>
 							</div>
 							<div>
 								<img src="@/assets/images/about_icon_thr.png" alt="" />
-								<span>Access custom pricing including cost, pricing, volume discounts, and more.</span>
+								<span>Offer industry solutions and relevant pricing, volume discounts</span>
 							</div>
 							<div>
 								<img src="@/assets/images/about_icon_four.png" alt="" />
-								<span>Get started on Toppay faster with dedicated implementation and support services.</span>
+								<span>Get started with Repaid, and experience efficient implementation and services</span>
 							</div>
 						</div>
 						<div class="aboutBtn" @click="handleGoEmail">
-							<span>Contact Us for more information</span>
+							<span>Send an email</span>
 							<img src="@/assets/images/right.png" alt="" />
 						</div>
 					</div>
@@ -58,8 +58,8 @@ const handleGoEmail = () => {
 		padding-top: 1.2rem;
 		.title {
 			text-align: right;
-			margin-right: 1.9rem;
-			margin-bottom: 0.52rem;
+			margin-right: 1.6rem;
+			margin-bottom: 0.6rem;
 		}
 		.contact {
 			position: relative;
@@ -72,7 +72,7 @@ const handleGoEmail = () => {
 				z-index: -1;
 			}
 			> div {
-				padding: 0 1.6rem;
+				padding: 0 2.6rem;
 				> div {
 					display: flex;
 					flex-direction: column;
@@ -90,9 +90,9 @@ const handleGoEmail = () => {
 						font-size: 0.8rem;
 						line-height: 0.8rem;
 						color: #000;
-						margin-bottom: 1rem;
+						margin-bottom: 0.92rem;
+						font-weight: 700;
 						> span {
-							font-weight: 500;
 							color: #3ab33b;
 						}
 					}
@@ -102,7 +102,7 @@ const handleGoEmail = () => {
 						grid-template-columns: repeat(12, 1fr);
 						grid-template-rows: repeat(2, 1fr);
 						gap: 0.6rem;
-						margin-bottom: 1.36rem;
+						margin-bottom: 0.94rem;
 						> div {
 							display: flex;
 							align-items: center;
@@ -119,7 +119,7 @@ const handleGoEmail = () => {
 							}
 						}
 						> div:nth-of-type(1) {
-							grid-column: 2 / 5;
+							grid-column: 2 / 6;
 							grid-row: 1 / 2;
 						}
 						> div:nth-of-type(2) {
@@ -127,7 +127,7 @@ const handleGoEmail = () => {
 							grid-row: 2 / 3;
 						}
 						> div:nth-of-type(3) {
-							grid-column: 7 / 10;
+							grid-column: 7 / 11;
 							grid-row: 1 / 2;
 						}
 						> div:nth-of-type(4) {
@@ -164,6 +164,96 @@ const handleGoEmail = () => {
 							background: #3ab33b;
 							> img {
 								transform: rotate(180deg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+	.about {
+		.about-main {
+			padding: 0.6rem 0.16rem;
+			.title {
+				text-align: center;
+				margin-right: 0;
+				margin-bottom: 0.4rem;
+			}
+			.contact {
+				> img {
+					display: none;
+				}
+				> div {
+					padding: 0;
+					background: #ffffffd4;
+					border-radius: 0.16rem;
+					> div {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						padding: 0.24rem;
+						border-radius: 0.16rem;
+						backdrop-filter: none;
+
+						> h3 {
+							font-size: 0.4rem;
+							line-height: 0.5rem;
+							margin-bottom: 0.24rem;
+						}
+
+						.items {
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							gap: 0.24rem;
+							margin-bottom: 0.24rem;
+							> div {
+								display: flex;
+								align-items: flex-start;
+								gap: 0.08rem;
+								align-self: flex-start;
+								> img {
+									height: 0.24rem;
+									width: 0.24rem;
+								}
+								> span {
+									font-size: 0.14rem;
+									line-height: 0.16rem;
+								}
+							}
+						}
+
+						.items::before {
+							display: block;
+							content: '';
+							height: 0.02rem;
+							width: 1.2rem;
+							background: #000000;
+						}
+
+						.items::after {
+							display: block;
+							content: '';
+							height: 0.02rem;
+							width: 1.2rem;
+							background: #000000;
+						}
+
+						.aboutBtn {
+							padding: 0.08rem;
+							border-radius: 0.12rem;
+
+							> span {
+								font-size: 0.16rem;
+								line-height: 0.2rem;
+							}
+							> img {
+								width: 0.12rem;
+								height: 0.12rem;
+								transition: transform 0.2s ease;
 							}
 						}
 					}

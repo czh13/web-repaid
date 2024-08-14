@@ -4,14 +4,16 @@
 			<div class="title">
 				<BaseTitleMain>
 					<template #one>Coverage</template>
-					<template #two>Global Businesses Pay and Get Paid</template>
+					<template #two>Get More Value from Every Transaction Anywhere in The World</template>
 				</BaseTitleMain>
 			</div>
 			<div class="covs">
 				<div>
 					<template v-for="cov in covs" :key="cov.name">
 						<div class="cov-bgc">
-							<img :src="cov.bgcImg" :alt="cov.name" />
+							<ClientOnly>
+								<img :src="cov.bgcImg" :alt="cov.name" />
+							</ClientOnly>
 							<div class="cov-desc">
 								<p>{{ cov.name }}</p>
 								<div></div>
@@ -68,9 +70,9 @@ const covs = [
 				align-items: flex-start;
 				.cov-bgc {
 					width: 4.8rem;
-					height: 4.16rem;
+					height: 5.86rem;
 					border-radius: 0.08rem;
-					cursor: default;
+					cursor: pointer;
 					overflow: hidden;
 					position: relative;
 					&:hover {
@@ -84,8 +86,8 @@ const covs = [
 						height: 100%;
 					}
 					.cov-desc {
-						background: #000000cc;
-						padding: 0.2rem 0.4rem 0.3rem;
+						background: #0000008a;
+						padding: 0.2rem 0.4rem 0.34rem;
 						color: #fff;
 						display: flex;
 						flex-direction: column;
@@ -93,15 +95,15 @@ const covs = [
 						border-radius: 0.08rem;
 						border-top: 0.08rem solid #3ab33b;
 						box-sizing: border-box;
-
+						height: 100%;
 						position: absolute;
-						top: 4.16rem;
+						top: 100%;
 						left: 0;
 
 						transition: top 0.3s ease;
 						> p {
 							font-size: 0.26rem;
-							font-weight: 500;
+							font-weight: 400;
 							line-height: 0.36rem;
 						}
 						> div {
@@ -112,6 +114,56 @@ const covs = [
 						> span {
 							font-size: 0.18rem;
 							line-height: 0.28rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+	.cov {
+		.cov-main {
+			padding: 0.6rem 0.16rem;
+			.title {
+				margin-bottom: 0.4rem;
+			}
+			.covs {
+				> div {
+					display: flex;
+					flex-direction: column;
+					gap: 0.12rem;
+					align-items: flex-start;
+					.cov-bgc {
+						width: 3.43rem;
+						height: 6.68rem;
+						border-radius: 0.08rem;
+						cursor: pointer;
+						overflow: hidden;
+						position: relative;
+						&:hover {
+							.cov-desc {
+								top: 0;
+								transition: top 0.3s ease;
+							}
+						}
+						> img {
+							width: 100%;
+							height: 100%;
+						}
+						.cov-desc {
+							background: #0000008a;
+							padding: 0.2rem 0.15rem 0;
+							gap: 0.15rem;
+							border-radius: 0.08rem;
+							border-top: 0.06rem solid #3ab33b;
+
+							transition: top 0.3s ease;
+							> p {
+								font-size: 0.22rem;
+								line-height: 0.28rem;
+							}
 						}
 					}
 				}

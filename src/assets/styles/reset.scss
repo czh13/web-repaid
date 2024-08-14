@@ -119,16 +119,18 @@ h6 {
 
 html {
     font-size: calc(100vw / 1920 * 100) !important;
+    overflow-x: hidden;
+
 }
 
-@media (min-width: 1280px) and (max-width: 1439px) {
-    html {
-        font-size: calc(100vw / 1280 * 100) !important;
-    }
-}
-
-// @media (max-width: 375px) {
+// @media (min-width: 1280px) and (max-width: 1439px) {
 //     html {
-//         font-size: calc(100vw / 375 * 100) !important;
+//         font-size: calc(100vw / 1280 * 100) !important;
 //     }
 // }
+
+@media (min-width: 375px) and (max-width: 767px) {
+    html {
+        font-size: calc(100vw / 375 * 100) !important;
+    }
+}
