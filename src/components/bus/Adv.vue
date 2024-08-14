@@ -142,6 +142,9 @@ onMounted(() => {
 					border-radius: 0.12rem;
 					padding: 0.08rem;
 					height: 100% !important;
+					&:hover {
+						transform: none;
+					}
 					> img {
 						width: 3.26rem;
 						height: 1.23rem;

@@ -32,7 +32,7 @@
 <style lang="scss" scoped>
 .mission {
 	width: 100vw;
-	background: url('~/assets/images/mission_bgc.png');
+	background: url('@/assets/images/mission_bgc.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top;
@@ -64,7 +64,7 @@
 
 @media (min-width: 375px) and (max-width: 767px) {
 	.mission {
-		background: url('~/assets/images/mission_bgc_phone.png');
+		background: url('@/assets/images/mission_bgc_phone.png');
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center top;

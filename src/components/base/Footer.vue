@@ -3,7 +3,7 @@
 		<div class="footer-main">
 			<div>
 				<div class="footer-tab">
-					<img src="~/assets/images/logo.png" alt="logo" />
+					<img src="@/assets/images/logo.png" alt="logo" />
 					<div class="items">
 						<div class="legal">
 							<span>Legal</span>
