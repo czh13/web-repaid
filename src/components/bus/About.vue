@@ -173,6 +173,69 @@ const handleGoEmail = () => {
 	}
 }
 
+@media (min-width: 767px) and (max-width: 1280px) {
+	.about {
+		width: 100vw;
+		background: #fafafa;
+		.about-main {
+			padding-top: 1.2rem;
+			.title {
+				text-align: right;
+				margin-right: 1.6rem;
+				margin-bottom: 0.6rem;
+			}
+			.contact {
+				position: relative;
+				z-index: 50;
+				> img {
+					width: 100%;
+					height: 3.4rem;
+					position: absolute;
+					top: 1.8rem;
+					z-index: -1;
+				}
+				> div {
+					padding: 0 1rem;
+					> div {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						padding: 0.8rem 0 0.66rem;
+						border-radius: 0.16rem 0.16rem 0rem 0rem;
+
+						box-shadow: 0px 1px 3px 0px #8f8f8f33;
+						backdrop-filter: blur(20px);
+						-webkit-backdrop-filter: blur(20px);
+
+						.items {
+							display: grid;
+							grid-template-columns: repeat(12, 1fr);
+							grid-template-rows: repeat(2, 1fr);
+							gap: 0.6rem;
+							margin-bottom: 0.94rem;
+							> div {
+								display: flex;
+								align-items: center;
+								gap: 0.12rem;
+								> img {
+									height: 0.38rem;
+									width: 0.38rem;
+								}
+								> span {
+									font-size: 0.18rem;
+									font-weight: 500;
+									line-height: 0.24rem;
+									color: #000;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (min-width: 375px) and (max-width: 767px) {
 	.about {
 		.about-main {

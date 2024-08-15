@@ -123,11 +123,11 @@ html {
 
 }
 
-// @media (min-width: 1280px) and (max-width: 1439px) {
-//     html {
-//         font-size: calc(100vw / 1280 * 100) !important;
-//     }
-// }
+@media (min-width: 767px) and (max-width: 1280px) {
+    html {
+        font-size: calc(100vw / 1280 * 100) !important;
+    }
+}
 
 @media (min-width: 375px) and (max-width: 767px) {
     html {

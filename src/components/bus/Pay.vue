@@ -25,11 +25,7 @@
 					</div>
 					<div class="pay-type">
 						<p>CORE PRODUCT - PAYOUTS</p>
-						<span>
-							Seamlessly send payouts with infrastructure built to elevate the local
-							<br />
-							customer experience
-						</span>
+						<span>Seamlessly send payouts with infrastructure built to elevate the local customer experience</span>
 					</div>
 					<div class="solu-box solu-topleft"></div>
 					<div class="solu-box solu-topright"></div>
@@ -89,6 +85,7 @@ const handleClick = (type: string) => {
 }
 
 const handleShowTab = (type: string) => {
+	console.log('🚀 ~ handleShowTab ~ type:', type)
 	const newContentsDom = document.getElementById('newContents')
 	newContentsDom?.remove()
 
@@ -272,6 +269,61 @@ const handleShowTab = (type: string) => {
 		.activeHeight {
 			height: 7rem;
 			padding: 0.3rem;
+		}
+	}
+}
+
+@media (min-width: 767px) and (max-width: 1280px) {
+	.pay {
+		padding: 0 1rem;
+		box-sizing: border-box;
+		.pay-main {
+			max-width: 100%;
+			width: 100%;
+
+			.pay-tab {
+				> div {
+					padding-left: 0.1rem;
+					.pay-type {
+						> span {
+							white-space: normal;
+						}
+					}
+				}
+			}
+			.pay-content {
+				> div {
+					height: 4.22rem;
+
+					.spans {
+						width: 38%;
+						> div {
+							> span {
+								font-size: 0.18rem;
+								line-height: 0.28rem;
+							}
+						}
+					}
+					.shows {
+						> img:nth-of-type(1) {
+							width: 4.58rem;
+							height: 2.29rem;
+						}
+						> img:nth-of-type(2) {
+							position: absolute;
+							z-index: 10;
+							right: -1rem;
+							bottom: 0;
+							width: 1.81rem;
+							height: 3.17rem;
+						}
+					}
+				}
+			}
+			.activeHeight {
+				height: 100%;
+				padding: 0.3rem;
+			}
 		}
 	}
 }

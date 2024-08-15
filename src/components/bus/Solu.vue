@@ -174,6 +174,22 @@ const solus = [
 	}
 }
 
+@media (min-width: 767px) and (max-width: 1280px) {
+	.solu {
+		.solu-main {
+			.solus {
+				> div {
+					grid-template-columns: repeat(3, 3.6rem);
+
+					.solu-desc {
+						padding: 0.42rem 0.2rem 0.4rem 0.45rem;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (min-width: 375px) and (max-width: 767px) {
 	.solu {
 		.solu-main {

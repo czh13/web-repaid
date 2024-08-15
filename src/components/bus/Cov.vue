@@ -122,6 +122,21 @@ const covs = [
 	}
 }
 
+@media (min-width: 767px) and (max-width: 1280px) {
+	.cov {
+		.cov-main {
+			.covs {
+				> div {
+					.cov-bgc {
+						width: 3.6rem;
+						height: 6.68rem;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (min-width: 375px) and (max-width: 767px) {
 	.cov {
 		.cov-main {

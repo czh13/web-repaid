@@ -150,6 +150,24 @@ onUnmounted(() => {
 	}
 }
 
+@media (min-width: 767px) and (max-width: 1280px) {
+	.header {
+		.header-main {
+			gap: 0.4rem;
+			padding: 0.4rem 1rem;
+			box-sizing: border-box;
+			> nav {
+				.navs {
+					display: flex;
+					align-items: center;
+					gap: 0.6rem;
+					padding: 0 0.16rem;
+				}
+			}
+		}
+	}
+}
+
 @media (min-width: 375px) and (max-width: 767px) {
 	.header {
 		z-index: 99;

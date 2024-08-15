@@ -46,6 +46,15 @@
 		}
 	}
 }
+
+@media (min-width: 767px) and (max-width: 1280px) {
+	.Banner {
+		.Banner-main {
+			width: 80%;
+		}
+	}
+}
+
 @media (min-width: 375px) and (max-width: 767px) {
 	.Banner {
 		.Banner-main {

@@ -125,6 +125,25 @@ onMounted(() => {
 	}
 }
 
+@media (min-width: 767px) and (max-width: 1280px) {
+	.adv {
+		width: 100vw;
+		.adv-main {
+			.advs {
+				.advItem {
+					> img {
+						width: 3.36rem;
+						height: 1.23rem;
+					}
+					> div {
+						margin-left: 0.08rem;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (min-width: 375px) and (max-width: 767px) {
 	.adv {
 		.adv-main {
