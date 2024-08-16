@@ -46,7 +46,7 @@
 
 <script setup lang="ts">
 const handleGoEmail = () => {
-	window.location.href = 'mailto:business@repaidlimits.com?subject=Ask for more infomation about Repaid'
+	window.location.href = 'mailto:business@repaidhq.com?subject=Ask for more infomation about Repaid'
 }
 </script>
 

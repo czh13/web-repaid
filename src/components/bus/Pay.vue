@@ -85,7 +85,6 @@ const handleClick = (type: string) => {
 }
 
 const handleShowTab = (type: string) => {
-	console.log('🚀 ~ handleShowTab ~ type:', type)
 	const newContentsDom = document.getElementById('newContents')
 	newContentsDom?.remove()
 

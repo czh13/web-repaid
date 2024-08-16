@@ -1,7 +1,7 @@
 <template>
 	<main ref="mainRef">
 		<BusBanner />
-		<BusPay />
+		<BusPay :key="reLoadKey" />
 		<BusSolu />
 		<BusCov />
 		<BusMission />
@@ -16,13 +16,27 @@ useSeoMeta({
 })
 
 const mainRef = ref<HTMLElement | null>(null)
+const reLoadKey = ref(0)
+
 onMounted(() => {
+	window.addEventListener('resize', updateWindowSize)
+
 	nextTick(() => {
 		if (mainRef.value) {
 			const sections = mainRef.value.children
 			getScrollTop(sections, 2)
 		}
 	})
+})
+
+const updateWindowSize = () => {
+	if (window.innerWidth > 767) {
+		reLoadKey.value = window.innerWidth
+	}
+}
+
+onUnmounted(() => {
+	window.removeEventListener('resize', updateWindowSize)
 })
 </script>
 
