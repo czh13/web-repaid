@@ -31,6 +31,20 @@
 	}
 }
 
+@media (min-width: 768px) and (max-width: 1280px) {
+	.titleMain {
+		gap: 0.12rem;
+		.one {
+			font-size: 0.48rem;
+			line-height: 0.67rem;
+		}
+		.two {
+			font-size: 0.28rem;
+			line-height: 0.28rem;
+		}
+	}
+}
+
 @media (min-width: 375px) and (max-width: 767px) {
 	.titleMain {
 		gap: 0.2rem;

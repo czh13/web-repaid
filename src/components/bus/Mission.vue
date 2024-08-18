@@ -62,10 +62,10 @@
 	}
 }
 
-@media (min-width: 767px) and (max-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1439px) {
 	.mission {
 		width: 100vw;
-		background: url('@/assets/images/mission_bgc_ipad.png');
+		background: url('@/assets/images/mission_bgc_pc.png');
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center top;
@@ -88,6 +88,33 @@
 						font-size: 0.22rem;
 						font-weight: 400;
 						line-height: 0.3rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+	.mission {
+		background: url('@/assets/images/mission_bgc_phone.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+		padding: 2.08rem 0 1.82rem 1.88rem;
+		.mission-main {
+			.mission-content {
+				gap: 0.5rem;
+				> div {
+					gap: 0.1rem;
+					> img {
+						width: 0.28rem;
+						height: 0.28rem;
+					}
+					> span {
+						font-size: 0.22em;
+						font-weight: 400;
+						line-height: 0.32rem;
 					}
 				}
 			}

@@ -174,7 +174,7 @@ const solus = [
 	}
 }
 
-@media (min-width: 767px) and (max-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1439px) {
 	.solu {
 		.solu-main {
 			.solus {
@@ -185,6 +185,41 @@ const solus = [
 						padding: 0.42rem 0.2rem 0.4rem 0.45rem;
 					}
 				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+	.solu {
+		.solu-main {
+			padding: 0.6rem 0.16rem;
+			.title {
+				margin-bottom: 0.4rem;
+			}
+			.solus {
+				width: 100%;
+				position: relative;
+				border: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				> div {
+					display: grid;
+					flex-direction: column;
+					grid-template-columns: repeat(2, 3rem);
+					grid-template-rows: repeat(3, 1fr);
+
+					.solu-desc {
+						display: flex;
+						flex-direction: column;
+						padding: 0.24rem;
+						border: 0.01rem solid #eee;
+					}
+				}
+			}
+			.solus::after {
+				display: none;
 			}
 		}
 	}

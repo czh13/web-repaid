@@ -74,7 +74,7 @@ const handleClick = (type: string) => {
 	isAnimate.value = true
 	currentType.value = type
 
-	window.innerWidth <= 767 && handleShowTab(type)
+	window.innerWidth <= 1280 && handleShowTab(type)
 
 	nextTick(() => {
 		const moduleScrolls = useModuleScrolls()
@@ -272,7 +272,7 @@ const handleShowTab = (type: string) => {
 	}
 }
 
-@media (min-width: 767px) and (max-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1439px) {
 	.pay {
 		padding: 0 1rem;
 		box-sizing: border-box;
@@ -322,6 +322,97 @@ const handleShowTab = (type: string) => {
 			.activeHeight {
 				height: 100%;
 				padding: 0.3rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 767px) and (max-width: 1280px) {
+	.pay {
+		flex-direction: column;
+		padding: 0 0.8rem;
+		box-sizing: border-box;
+		.pay-main {
+			max-width: 100vw;
+			width: 100%;
+			.pay-tab {
+				flex-direction: column;
+				width: 100%;
+
+				> div {
+					width: 100%;
+					gap: 0.2rem;
+					padding: 0.2rem 0.5rem;
+					max-height: 100%;
+					border: 0.01rem solid #eeeeee;
+					border-top: none;
+					border-bottom: 0.01rem solid #eeeeee;
+					justify-content: flex-start;
+
+					.pay-icon {
+						> div {
+							width: 0.21rem;
+							height: 0.21rem;
+							padding: 0.13rem;
+						}
+					}
+					.pay-type {
+						margin-bottom: 0;
+						> p {
+							font-size: 0.18rem;
+							font-weight: 500;
+							line-height: 0.26rem;
+							color: #8f8f8f;
+						}
+						> span {
+							white-space: normal;
+						}
+					}
+				}
+			}
+			.pay-content {
+				height: 0;
+				border-radius: 0 0 0.16rem 0.16rem;
+				border: none;
+				> div {
+					box-shadow: none;
+					padding: 0.2rem 0.12rem 0.8rem;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					gap: 0.44rem;
+					.spans {
+						width: 100%;
+						> div {
+							gap: 0.2rem;
+							align-self: center;
+							> span {
+								font-size: 0.16rem;
+								line-height: 0.28rem;
+							}
+						}
+					}
+					.shows {
+						> img:nth-of-type(1) {
+							width: 2.74rem;
+							height: 1.37rem;
+						}
+						> img:nth-of-type(2) {
+							position: absolute;
+							z-index: 10;
+							right: -0.2rem;
+							bottom: -0.7rem;
+							width: 1.08rem;
+							height: 1.89rem;
+						}
+					}
+				}
+			}
+
+			.activeHeight {
+				height: 100%;
+				padding: 0.1rem;
 			}
 		}
 	}

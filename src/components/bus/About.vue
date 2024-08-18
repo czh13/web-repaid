@@ -173,7 +173,7 @@ const handleGoEmail = () => {
 	}
 }
 
-@media (min-width: 767px) and (max-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1439px) {
 	.about {
 		width: 100vw;
 		background: #fafafa;
@@ -218,15 +218,104 @@ const handleGoEmail = () => {
 								align-items: center;
 								gap: 0.12rem;
 								> img {
-									height: 0.38rem;
-									width: 0.38rem;
+									height: 0.32rem;
+									width: 0.32rem;
 								}
 								> span {
-									font-size: 0.18rem;
+									font-size: 0.14rem;
 									font-weight: 500;
-									line-height: 0.24rem;
+									line-height: 0.16rem;
 									color: #000;
 								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+	.about {
+		.about-main {
+			padding: 0.6rem 0.16rem;
+			.title {
+				text-align: right;
+				width: 90%;
+				margin-bottom: 0.4rem;
+			}
+			.contact {
+				> img {
+					height: 1.35rem;
+				}
+				> div {
+					padding: 0 0.8rem;
+					border-radius: 0.16rem;
+					> div {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						padding: 0.24rem;
+						border-radius: 0.16rem;
+						backdrop-filter: none;
+						background-color: rgb(255, 255, 255, 0.95);
+						> h3 {
+							font-size: 0.4rem;
+							line-height: 0.5rem;
+							margin-bottom: 0.24rem;
+						}
+
+						.items {
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							gap: 0.24rem;
+							margin-bottom: 0.24rem;
+							> div {
+								display: flex;
+								align-items: flex-start;
+								gap: 0.08rem;
+								align-self: flex-start;
+								> img {
+									height: 0.24rem;
+									width: 0.24rem;
+								}
+								> span {
+									font-size: 0.16rem;
+									line-height: 0.24rem;
+								}
+							}
+						}
+
+						.items::before {
+							display: block;
+							content: '';
+							height: 0.02rem;
+							width: 1.2rem;
+							background: #000000;
+						}
+
+						.items::after {
+							display: block;
+							content: '';
+							height: 0.02rem;
+							width: 1.2rem;
+							background: #000000;
+						}
+
+						.aboutBtn {
+							padding: 0.08rem;
+							border-radius: 0.12rem;
+
+							> span {
+								font-size: 0.16rem;
+								line-height: 0.2rem;
+							}
+							> img {
+								width: 0.12rem;
+								height: 0.12rem;
+								transition: transform 0.2s ease;
 							}
 						}
 					}

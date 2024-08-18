@@ -122,7 +122,7 @@ const covs = [
 	}
 }
 
-@media (min-width: 767px) and (max-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1439px) {
 	.cov {
 		.cov-main {
 			.covs {
@@ -130,6 +130,56 @@ const covs = [
 					.cov-bgc {
 						width: 3.6rem;
 						height: 6.68rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+	.cov {
+		.cov-main {
+			padding: 0.8rem;
+			.title {
+				margin-bottom: 0.6rem;
+			}
+			.covs {
+				> div {
+					display: flex;
+					flex-direction: column;
+					gap: 0.6rem;
+					align-items: flex-start;
+					.cov-bgc {
+						width: 6.08rem;
+						height: 6.68rem;
+						border-radius: 0.08rem;
+						cursor: pointer;
+						overflow: hidden;
+						position: relative;
+						&:hover {
+							.cov-desc {
+								top: 0;
+								transition: top 0.3s ease;
+							}
+						}
+						> img {
+							width: 100%;
+							height: 100%;
+						}
+						.cov-desc {
+							background: #0000008a;
+							padding: 0.2rem 0.15rem 0;
+							gap: 0.15rem;
+							border-radius: 0.08rem;
+							border-top: 0.06rem solid #3ab33b;
+
+							transition: top 0.3s ease;
+							> p {
+								font-size: 0.3rem;
+								line-height: 0.28rem;
+							}
+						}
 					}
 				}
 			}

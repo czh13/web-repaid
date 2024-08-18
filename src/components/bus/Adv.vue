@@ -10,7 +10,9 @@
 			<div class="advs">
 				<template v-for="adv in advs" :key="adv.title">
 					<div class="advItem">
-						<img :src="adv.pic" :alt="adv.title" />
+						<p class="advItem-pic">
+							<img :src="adv.pic" :alt="adv.title" />
+						</p>
 						<div>
 							<p>{{ adv.title }}</p>
 							<div>
@@ -82,12 +84,19 @@ onMounted(() => {
 					transform: translateY(-0.1rem);
 					transition: transform 0.2s linear;
 				}
-				> img {
+				.advItem-pic {
+					background-color: #f1f2f5;
+					border-radius: 0.08rem;
 					width: 4.48rem;
 					height: 1.64rem;
+					> img {
+						width: 100%;
+						height: 100%;
+					}
 				}
 				> div {
-					margin-left: 0.28rem;
+					padding-left: 0.28rem;
+					padding-top: 0.18rem;
 					> p {
 						font-size: 0.18rem;
 						font-weight: 500;
@@ -125,19 +134,90 @@ onMounted(() => {
 	}
 }
 
-@media (min-width: 767px) and (max-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1439px) {
 	.adv {
 		width: 100vw;
 		.adv-main {
 			.advs {
 				.advItem {
-					> img {
-						width: 3.36rem;
-						height: 1.23rem;
+					.advItem-pic {
+						border-radius: 0.08rem;
+						width: 100%;
+						background-color: #f1f2f5;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						> img {
+							width: 3.36rem;
+							height: 1.23rem;
+						}
 					}
 					> div {
-						margin-left: 0.08rem;
+						padding-left: 0.08rem;
 					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+	.adv {
+		.adv-main {
+			padding: 0.6rem 0.8rem;
+			box-sizing: border-box;
+			width: 100%;
+			.title {
+				margin-bottom: 0.4rem;
+			}
+			.advs {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0.12rem;
+				.advItem {
+					width: 100%;
+					border: 0.01rem solid #d1d1d1;
+					border-radius: 0.12rem;
+					padding: 0.08rem;
+					height: 100% !important;
+					&:hover {
+						transform: none;
+					}
+					.advItem-pic {
+						width: 100%;
+						background-color: #f1f2f5;
+						border-radius: 0.08rem;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						> img {
+							width: 3.26rem;
+							height: 1.23rem;
+						}
+					}
+
+					> div {
+						padding-left: 0.14rem;
+						> div {
+							> div {
+								display: flex;
+								align-items: flex-start;
+								gap: 0.08rem;
+								> img {
+									width: 0.16rem;
+									height: 0.16rem;
+								}
+							}
+						}
+					}
+				}
+				.advItem:nth-of-type(1) {
+					border-radius: 0.12rem;
+				}
+				.advItem:nth-of-type(3) {
+					border-radius: 0.12rem;
 				}
 			}
 		}
@@ -164,13 +244,18 @@ onMounted(() => {
 					&:hover {
 						transform: none;
 					}
-					> img {
+					.advItem-pic {
+						background-color: #f1f2f5;
+						border-radius: 0.08rem;
 						width: 3.26rem;
 						height: 1.23rem;
+						> img {
+							width: 100%;
+							height: 100%;
+						}
 					}
 					> div {
-						margin-left: 0.22rem;
-						margin-bottom: 0.22rem;
+						padding-left: 0.14rem;
 						> div {
 							> div {
 								display: flex;

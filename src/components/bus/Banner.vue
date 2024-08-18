@@ -18,7 +18,7 @@
 <style lang="scss" scoped>
 .Banner {
 	width: 100vw;
-	background: linear-gradient(180deg, #f1fff1 70%, #ffffff);
+	background: linear-gradient(180deg, var(--nav-color), var(--background-color));
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -31,14 +31,14 @@
 			font-weight: 600;
 			line-height: 0.72rem;
 			margin-bottom: 0.24rem;
-			color: #000;
+			color: var(--text-color);
 			text-align: center;
 			> span {
 				color: #3ab33b;
 			}
 		}
 		> p {
-			color: #000;
+			color: var(--text-color);
 			font-size: 0.18rem;
 			font-weight: 400;
 			line-height: 0.24rem;
@@ -47,10 +47,34 @@
 	}
 }
 
-@media (min-width: 767px) and (max-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1439px) {
 	.Banner {
 		.Banner-main {
 			width: 80%;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+	.Banner {
+		.Banner-main {
+			width: 86%;
+			padding: 1.94rem 0.16rem 0.24rem;
+			> h3 {
+				font-size: 0.52rem;
+				font-weight: 600;
+				line-height: 0.72rem;
+				margin-bottom: 0.2rem;
+				text-align: center;
+
+				> span {
+					color: #3ab33b;
+				}
+			}
+			> p {
+				font-size: 0.18rem;
+				text-align: center;
+			}
 		}
 	}
 }

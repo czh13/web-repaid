@@ -12,7 +12,8 @@
 					</template>
 				</div>
 				<div class="contactBtn">
-					<div class="contact" @click="handleTab('about')">Contact Us</div>
+					<!-- <div class="contact" @click="handleTheme">切换</div> -->
+					<BaseButton :color="'#3ab12c'" :bg-color="'#fff'" @click="handleTab('about')">Contact Us</BaseButton>
 					<img src="@/assets/images/header_tab_icon.png" alt="" @click="handlShow" />
 				</div>
 			</nav>
@@ -53,6 +54,12 @@ const handlShow = () => {
 	isShowTab.value = !isShowTab.value
 }
 
+const handleTheme = () => {
+	const root = document.documentElement
+	console.log('🚀 ~ handleTheme ~ root:', root)
+	root.classList.toggle('dark-mode')
+}
+
 onMounted(() => {
 	window.addEventListener('scroll', handleScroll)
 })
@@ -73,6 +80,7 @@ onUnmounted(() => {
 	justify-content: center;
 	background: #f2fff3;
 	border-bottom: 0.01rem solid #ecf4ec;
+	box-sizing: border-box;
 
 	position: fixed;
 	top: 0;
@@ -150,7 +158,7 @@ onUnmounted(() => {
 	}
 }
 
-@media (min-width: 767px) and (max-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1439px) {
 	.header {
 		.header-main {
 			gap: 0.4rem;
@@ -168,19 +176,25 @@ onUnmounted(() => {
 	}
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
+@media (min-width: 767px) and (max-width: 1279px) {
 	.header {
 		z-index: 99;
 		.header-main {
 			max-width: 100vw;
-			gap: 0.5rem;
-			padding: 0.12rem 0 0.12rem 0.48rem;
+			width: 100%;
+			gap: 0;
+			padding: 0.32rem 0.2rem 0.32rem 1rem;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
 			> img {
 				width: 1.48rem;
 				height: 0.32rem;
 			}
 			> nav {
-				flex: 1;
+				flex: 0;
 				align-items: center;
 				justify-content: normal;
 
@@ -193,7 +207,79 @@ onUnmounted(() => {
 
 					box-sizing: border-box;
 					position: fixed;
-					top: 61px;
+					top: 1.16rem;
+					left: 0;
+					z-index: 66;
+					width: 100vw;
+					height: 100vh;
+					background: rgba(241, 255, 241);
+					flex-direction: column;
+					transition: height 0.2s ease;
+					> div {
+						position: relative;
+						.title-text {
+							font-size: 0.18rem;
+							line-height: 0.2rem;
+							padding: 0.06rem 0;
+						}
+						.title-solid {
+							display: none;
+						}
+					}
+				}
+				.contactBtn {
+					display: flex;
+					align-items: center;
+					gap: 0.36rem;
+					.contact {
+						font-size: 0.14rem;
+						font-weight: 400;
+						padding: 0.08rem 0.06rem;
+						border-radius: 0.08rem;
+					}
+					> img {
+						display: block;
+						width: 0.48rem;
+						height: 0.48rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+	.header {
+		z-index: 99;
+		.header-main {
+			max-width: 100vw;
+			width: 100%;
+			gap: 0;
+			padding: 0.12rem 0.1rem 0.12rem 0.48rem;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			> img {
+				width: 1.48rem;
+				height: 0.32rem;
+			}
+			> nav {
+				flex: 0;
+				align-items: center;
+				justify-content: normal;
+
+				.showNavs {
+					display: none;
+				}
+				.navs {
+					gap: 0.4rem;
+					padding: 0.2rem 0.16rem;
+
+					box-sizing: border-box;
+					position: fixed;
+					top: 0.61rem;
 					left: 0;
 					z-index: 66;
 					width: 100vw;
