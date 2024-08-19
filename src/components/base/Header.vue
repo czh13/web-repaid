@@ -78,7 +78,7 @@ onUnmounted(() => {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #f0fff1;
+	background: #f0ffef;
 	border-bottom: 0.01rem solid #ecf4ec;
 	box-sizing: border-box;
 
@@ -274,7 +274,7 @@ onUnmounted(() => {
 				justify-content: normal;
 
 				.showNavs {
-					display: none;
+					opacity: 0;
 				}
 				.navs {
 					gap: 0.4rem;
@@ -282,14 +282,14 @@ onUnmounted(() => {
 
 					box-sizing: border-box;
 					position: fixed;
-					top: 0.61rem;
+					top: 0.58rem;
 					left: 0;
 					z-index: 66;
 					width: 100vw;
 					height: 100vh;
 					background: rgba(241, 255, 241);
 					flex-direction: column;
-					transition: height 0.2s ease;
+					transition: opacity 0.2s ease;
 					> div {
 						position: relative;
 						.title-text {

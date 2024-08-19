@@ -128,7 +128,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center top;
-		padding: 0.86rem 0 0.54rem 0.64rem;
+		padding: 0.86rem 0 0.64rem 0.64rem;
 		.mission-main {
 			.mission-content {
 				gap: 0.2rem;
