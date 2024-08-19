@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-	title: 'A LEADING PAYMENT SOLUTION PROVIDER BUILD FOR SUCCESS IN EMERGING MARKETS',
+	title: 'Repaid, a secure, convenient and efficient payment experience',
 })
 
 const mainRef = ref<HTMLElement | null>(null)

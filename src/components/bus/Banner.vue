@@ -18,7 +18,7 @@
 <style lang="scss" scoped>
 .Banner {
 	width: 100vw;
-	background: linear-gradient(180deg, var(--nav-color), var(--background-color));
+	background: linear-gradient(180deg, #f1fff1 70%, #ffffff);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -31,14 +31,14 @@
 			font-weight: 600;
 			line-height: 0.72rem;
 			margin-bottom: 0.24rem;
-			color: var(--text-color);
+			color: #000;
 			text-align: center;
 			> span {
 				color: #3ab33b;
 			}
 		}
 		> p {
-			color: var(--text-color);
+			color: #000;
 			font-size: 0.18rem;
 			font-weight: 400;
 			line-height: 0.24rem;

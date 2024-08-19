@@ -78,7 +78,7 @@ onUnmounted(() => {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #f2fff3;
+	background: #f0fff1;
 	border-bottom: 0.01rem solid #ecf4ec;
 	box-sizing: border-box;
 
@@ -116,7 +116,8 @@ onUnmounted(() => {
 							color: #3ab33b;
 						}
 						.title-solid {
-							display: block;
+							transform: scaleX(1);
+							transform-origin: bottom left;
 						}
 					}
 					.title-text {
@@ -131,10 +132,12 @@ onUnmounted(() => {
 						height: 0.02rem;
 						position: absolute;
 						bottom: 0;
-						display: none;
 						width: 100%;
 						border-radius: 0.02rem;
 						background: #3ab33b;
+						transform: scaleX(0);
+						transform-origin: bottom right;
+						transition: transform 0.25s ease-out;
 					}
 				}
 			}

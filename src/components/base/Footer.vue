@@ -29,7 +29,7 @@
 								</div>
 								<div>
 									<img src="@/assets/images/fakecode.png" alt="" />
-									<span>Twitter</span>
+									<span>X</span>
 								</div>
 							</div>
 						</div>

@@ -4,7 +4,7 @@
 			<div class="title">
 				<BaseTitleMain>
 					<template #one>Solutions</template>
-					<template #two>Global Businesses Pay and Get Paid</template>
+					<template #two>Local Markets Pay and Get Paid</template>
 				</BaseTitleMain>
 			</div>
 			<div class="solus">

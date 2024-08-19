@@ -123,7 +123,7 @@ const handleGoEmail = () => {
 							grid-row: 1 / 2;
 						}
 						> div:nth-of-type(2) {
-							grid-column: 4 / 7;
+							grid-column: 4 / 8;
 							grid-row: 2 / 3;
 						}
 						> div:nth-of-type(3) {
