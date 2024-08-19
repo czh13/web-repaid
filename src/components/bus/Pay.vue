@@ -117,20 +117,24 @@ const handleShowTab = (type: string) => {
 			display: flex;
 			align-items: center;
 			> div {
+				// width: 90%;
+
 				position: relative;
 				flex: 1;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-
 				gap: 0.2rem;
+
 				padding: 0.4rem 0;
+				padding-left: 1rem;
+				box-sizing: border-box;
+
 				max-height: 1.34rem;
 				height: 100%;
 				border: 0.01rem solid #eeeeee;
 				border-top: none;
 				border-bottom: none;
-				box-sizing: border-box;
 
 				.pay-icon {
 					border: 0.01rem solid #eeeeee;
@@ -164,7 +168,10 @@ const handleShowTab = (type: string) => {
 						font-weight: 400;
 						line-height: 0.2rem;
 						color: #8f8f8f;
-						white-space: nowrap;
+
+						display: block;
+						// width: 99%;
+						// white-space: nowrap;
 					}
 				}
 
