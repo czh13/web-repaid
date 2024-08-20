@@ -78,8 +78,11 @@ const handleClick = (type: string) => {
 
 	nextTick(() => {
 		const moduleScrolls = useModuleScrolls()
+		const contentsDom = document.getElementById('contents') as HTMLElement
+		const height = contentsDom.offsetHeight
+
 		for (const key in moduleScrolls.value) {
-			moduleScrolls.value[key] = moduleScrolls.value[key] + 700
+			moduleScrolls.value[key] = moduleScrolls.value[key] + height
 		}
 	})
 }

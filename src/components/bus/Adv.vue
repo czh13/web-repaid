@@ -50,10 +50,6 @@ const advs = [
 		spans: ['Ultimate Data Encryption', 'Fraud Protection', 'Robust Account Protection'],
 	},
 ]
-onMounted(() => {
-	let boxes = document.querySelectorAll('.advItem') as NodeListOf<HTMLDivElement>
-	setMinHeight(boxes)
-})
 </script>
 
 <style lang="scss" scoped>
@@ -73,6 +69,7 @@ onMounted(() => {
 			align-items: flex-start;
 			gap: 0.12rem;
 			.advItem {
+				min-height: 3.6rem;
 				border: 0.01rem solid #d1d1d1;
 				border-radius: 0.12rem;
 				padding: 0.12rem;
@@ -140,6 +137,8 @@ onMounted(() => {
 		.adv-main {
 			.advs {
 				.advItem {
+					min-height: 3.6rem;
+
 					.advItem-pic {
 						border-radius: 0.08rem;
 						width: 100%;
@@ -240,6 +239,8 @@ onMounted(() => {
 					border: 0.01rem solid #d1d1d1;
 					border-radius: 0.12rem;
 					padding: 0.08rem;
+
+					min-height: 100% !important;
 					height: 100% !important;
 					&:hover {
 						transform: none;

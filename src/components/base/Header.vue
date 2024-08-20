@@ -3,7 +3,7 @@
 		<div class="header-main">
 			<img src="@/assets/images/logo.png" alt="" />
 			<nav>
-				<div class="navs" :class="{ showNavs: !isShowTab }">
+				<div class="navs" :class="{ showNavs: isShowTab }">
 					<template v-for="nav in navs" :key="nav.title">
 						<div @click="handleTab(nav.path)">
 							<div class="title-text">{{ nav.title }}</div>
@@ -56,7 +56,6 @@ const handlShow = () => {
 
 const handleTheme = () => {
 	const root = document.documentElement
-	console.log('🚀 ~ handleTheme ~ root:', root)
 	root.classList.toggle('dark-mode')
 }
 
@@ -253,7 +252,7 @@ onUnmounted(() => {
 
 @media (min-width: 375px) and (max-width: 767px) {
 	.header {
-		z-index: 99;
+		z-index: 999;
 		.header-main {
 			max-width: 100vw;
 			width: 100%;
@@ -274,12 +273,13 @@ onUnmounted(() => {
 				justify-content: normal;
 
 				.showNavs {
-					opacity: 0;
+					opacity: 1 !important;
+					display: flex !important;
 				}
 				.navs {
 					gap: 0.4rem;
 					padding: 0.2rem 0.16rem;
-
+					display: none;
 					box-sizing: border-box;
 					position: fixed;
 					top: 0.58rem;
@@ -290,6 +290,8 @@ onUnmounted(() => {
 					background: rgba(241, 255, 241);
 					flex-direction: column;
 					transition: opacity 0.2s ease;
+					opacity: 0;
+
 					> div {
 						position: relative;
 						.title-text {

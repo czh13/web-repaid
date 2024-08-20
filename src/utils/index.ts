@@ -27,7 +27,7 @@ export const getScrollTop = (sections: HTMLCollection, sliceNum: number = 0) => 
 	Array.from(sections)
 		.slice(sliceNum)
 		.forEach(sec => {
-			const top = sec.getBoundingClientRect().top
+			const top = sec.getBoundingClientRect().top + window.scrollY
 			const classname = sec.className
 			moduleScrolls.value[classname as keyof typeof moduleScrolls.value] = top
 		})
