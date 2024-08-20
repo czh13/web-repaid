@@ -35,7 +35,7 @@
 			</div>
 			<div id="contents">
 				<BaseAnimateOp v-model="isAnimate">
-					<div class="pay-content" :class="{ activeHeight: !!currentType }">
+					<div class="pay-content" :class="{ activeHeight: !!currentType }" @transitionend="handleTransitionend">
 						<div>
 							<div class="spans">
 								<div>
@@ -75,16 +75,17 @@ const handleClick = (type: string) => {
 	currentType.value = type
 
 	window.innerWidth <= 1280 && handleShowTab(type)
+}
 
-	nextTick(() => {
-		const moduleScrolls = useModuleScrolls()
-		const contentsDom = document.getElementById('contents') as HTMLElement
-		const height = contentsDom.offsetHeight
+const handleTransitionend = () => {
+	const moduleScrolls = useModuleScrolls()
+	const contentsDom = document.getElementById('contents') as HTMLElement
 
-		for (const key in moduleScrolls.value) {
-			moduleScrolls.value[key] = moduleScrolls.value[key] + height
-		}
-	})
+	const height = contentsDom.offsetHeight
+
+	for (const key in moduleScrolls.value) {
+		moduleScrolls.value[key] = moduleScrolls.value[key] + height
+	}
 }
 
 const handleShowTab = (type: string) => {
