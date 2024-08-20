@@ -74,6 +74,17 @@ const handleClick = (type: string) => {
 	isAnimate.value = true
 	currentType.value = type
 
+	window.innerWidth <= 1280 &&
+		nextTick(() => {
+			const moduleScrolls = useModuleScrolls()
+			const contentsDom = document.getElementById('contents') as HTMLElement
+			const height = contentsDom.offsetHeight
+
+			for (const key in moduleScrolls.value) {
+				moduleScrolls.value[key] = moduleScrolls.value[key] + height
+			}
+		})
+
 	window.innerWidth <= 1280 && handleShowTab(type)
 }
 
