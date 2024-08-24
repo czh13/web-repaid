@@ -1,7 +1,7 @@
 <template>
 	<header class="header" :class="{ 'header-hidden': isLeaveTop }">
 		<div class="header-main">
-			<img src="@/assets/images/logo.png" alt="" />
+			<NuxtLink to="/"><img src="@/assets/images/logo.png" alt="logo" /></NuxtLink>
 			<nav>
 				<div class="navs" :class="{ showNavs: isShowTab }">
 					<template v-for="nav in navs" :key="nav.title">
@@ -94,9 +94,12 @@ onUnmounted(() => {
 		gap: 0.6rem;
 		padding: 0.4rem 0.08rem;
 		box-sizing: border-box;
-		> img {
-			width: 1.4rem;
-			height: 0.28rem;
+		> a {
+			display: flex;
+			> img {
+				width: 1.4rem;
+				height: 0.28rem;
+			}
 		}
 		> nav {
 			flex: 1;
@@ -201,7 +204,8 @@ onUnmounted(() => {
 				justify-content: normal;
 
 				.showNavs {
-					display: none;
+					opacity: 1 !important;
+					display: flex !important;
 				}
 				.navs {
 					gap: 0.4rem;
@@ -209,14 +213,17 @@ onUnmounted(() => {
 
 					box-sizing: border-box;
 					position: fixed;
-					top: 1.16rem;
+					top: 1.06rem;
 					left: 0;
 					z-index: 66;
 					width: 100vw;
 					height: 100vh;
 					background: rgba(241, 255, 241);
 					flex-direction: column;
-					transition: height 0.2s ease;
+					transition: opacity 0.2s ease;
+					opacity: 0;
+					display: none;
+
 					> div {
 						position: relative;
 						.title-text {
@@ -282,7 +289,7 @@ onUnmounted(() => {
 					display: none;
 					box-sizing: border-box;
 					position: fixed;
-					top: 0.58rem;
+					top: 0.5rem;
 					left: 0;
 					z-index: 66;
 					width: 100vw;

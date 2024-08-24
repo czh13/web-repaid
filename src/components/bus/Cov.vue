@@ -31,7 +31,15 @@
 import CovBgcOne from '@/assets/images/cov_bgc_one.png'
 import CovBgcTwo from '@/assets/images/cov_bgc_two.png'
 import CovBgcThr from '@/assets/images/cov_bgc_thr.png'
-const covs = [
+
+import CovBgcOnePH from '@/assets/images/cov_bgc_one_phone.png'
+import CovBgcTwoPH from '@/assets/images/cov_bgc_two_phone.png'
+import CovBgcThrPH from '@/assets/images/cov_bgc_thr_phone.png'
+
+import CovBgcOneIP from '@/assets/images/cov_bgc_one_ipad.png'
+import CovBgcTwoIP from '@/assets/images/cov_bgc_two_ipad.png'
+import CovBgcThrIP from '@/assets/images/cov_bgc_thr_ipad.png'
+const covs = ref([
 	{
 		name: 'LATIN AMERICA',
 		text: 'Spurred by growing demand for online banking solutions, favorable demographics, and a large underserved population, fintech activity is expanding in Latin America. Latin America has about 450 million mobile phone subscribers and is expected to reach 484 million by 2025. Of those 450 million users, nearly 80% access the Internet through mobile phones. Brazil contributes about 42% of B2C retail transactions in Latin America. Due to the rise of new banks, e-wallets, etc., the increasing demand by consumers and businesses is driving the growth of digital payments and the relevant solutions.',
@@ -47,7 +55,46 @@ const covs = [
 		text: "In 2022, African e-commerce turnover was about $32.5 billion, and it is expected to rise to $60 billion by 2027. The number of e-commerce consumers is expected to increase from 388 million in 2022 to 610 million in 2027. With the development of diversified payment methods, the digital payment industry in Africa will be more dynamic. Nigeria's emergence as a country with the fintech sector has its unique social context and is as indispensable as government support for the digital economy. As Africa's largest economy, Nigeria has actively promoted the diversification of its economic structure, and regards the digital economy as the future of sustainable economic growth",
 		bgcImg: CovBgcThr,
 	},
-]
+])
+
+const checkDevice = () => {
+	const userAgent = navigator.userAgent || navigator.vendor || window.opera
+	if (/android/i.test(userAgent) || /iPhone/.test(userAgent)) {
+		covs.value[0].bgcImg = CovBgcOnePH
+		covs.value[1].bgcImg = CovBgcTwoPH
+		covs.value[2].bgcImg = CovBgcThrPH
+	} else if (/iPad|iPod/.test(userAgent) && !window.MSStream) {
+		covs.value[0].bgcImg = CovBgcOneIP
+		covs.value[1].bgcImg = CovBgcTwoIP
+		covs.value[2].bgcImg = CovBgcThrIP
+	} else {
+	}
+}
+
+const updateWindowSize = () => {
+	if (window.innerWidth <= 767) {
+		covs.value[0].bgcImg = CovBgcOnePH
+		covs.value[1].bgcImg = CovBgcTwoPH
+		covs.value[2].bgcImg = CovBgcThrPH
+	} else if (window.innerWidth > 1280) {
+		covs.value[0].bgcImg = CovBgcOne
+		covs.value[1].bgcImg = CovBgcTwo
+		covs.value[2].bgcImg = CovBgcThr
+	} else {
+		covs.value[0].bgcImg = CovBgcOneIP
+		covs.value[1].bgcImg = CovBgcTwoIP
+		covs.value[2].bgcImg = CovBgcThrIP
+	}
+}
+
+onMounted(() => {
+	checkDevice()
+	window.addEventListener('resize', updateWindowSize)
+})
+
+onUnmounted(() => {
+	window.removeEventListener('resize', updateWindowSize)
+})
 </script>
 
 <style lang="scss" scoped>
@@ -152,7 +199,7 @@ const covs = [
 					align-items: flex-start;
 					.cov-bgc {
 						width: 6.08rem;
-						height: 6.68rem;
+						height: 4.31rem;
 						border-radius: 0.08rem;
 						cursor: pointer;
 						overflow: hidden;

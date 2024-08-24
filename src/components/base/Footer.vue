@@ -3,12 +3,13 @@
 		<div class="footer-main">
 			<div>
 				<div class="footer-tab">
-					<img src="@/assets/images/logo.png" alt="logo" />
+					<NuxtLink to="/pp"><img src="@/assets/images/logo.png" alt="logo" /></NuxtLink>
+					<!-- <img src="@/assets/images/logo.png" alt="logo" /> -->
 					<div class="items">
 						<div class="legal">
 							<span>Legal</span>
-							<NuxtLink to="/">Privacy</NuxtLink>
-							<NuxtLink to="/">Terms of Service</NuxtLink>
+							<NuxtLink to="/pp">Privacy Policy</NuxtLink>
+							<NuxtLink to="/tos">Terms of Service</NuxtLink>
 						</div>
 						<div class="questions">
 							<span>General questions</span>
@@ -17,20 +18,10 @@
 							<p>business@repaidhq.com</p>
 						</div>
 						<div class="follow">
-							<span>Follow Us</span>
+							<span>Let's talk</span>
 							<div class="follow-qrcode">
-								<div>
-									<img src="@/assets/images/fakecode.png" alt="" />
-									<span>Telegram</span>
-								</div>
-								<div>
-									<img src="@/assets/images/fakecode.png" alt="" />
-									<span>WhatsApp</span>
-								</div>
-								<div>
-									<img src="@/assets/images/fakecode.png" alt="" />
-									<span>X</span>
-								</div>
+								<span>Find us on Telegram: +1936 240 8965</span>
+								<span>Find us on WhatsApp: +1 352 287 3489</span>
 							</div>
 						</div>
 					</div>
@@ -38,7 +29,6 @@
 				<div class="footer-tip">
 					<div>
 						<p>© 2024 Repaid Headquarter all rights reserved</p>
-						<p>Registered at XXXXXXXXXXXXXX</p>
 					</div>
 				</div>
 			</div>
@@ -74,9 +64,12 @@
 				justify-content: space-between;
 
 				gap: 0.9rem;
-				> img {
-					width: 2.5rem;
-					height: 0.6rem;
+				> a {
+					display: flex;
+					> img {
+						width: 1.68rem;
+						height: 0.41rem;
+					}
 				}
 
 				.items {
@@ -106,22 +99,12 @@
 						}
 						.follow-qrcode {
 							display: flex;
-							flex-direction: row !important;
-							align-items: center;
-							gap: 0.47rem;
-							> div {
-								display: flex;
-								flex-direction: column;
-								align-items: center;
-								gap: 0.1rem;
-								> img {
-									width: 1.52rem;
-									height: 1.52rem;
-								}
-								> span {
-									font-size: 0.14rem;
-									color: #999999;
-								}
+							flex-direction: column;
+							gap: 0.32rem;
+							> span {
+								font-size: 0.18rem;
+								color: #000;
+								line-height: 0.32rem;
 							}
 						}
 					}
@@ -173,9 +156,12 @@
 					justify-content: space-between;
 
 					gap: 0.9rem;
-					> img {
-						width: 1.68rem;
-						height: 0.41rem;
+					> a {
+						display: flex;
+						> img {
+							width: 1.68rem;
+							height: 0.41rem;
+						}
 					}
 
 					.items {
@@ -205,22 +191,12 @@
 							}
 							.follow-qrcode {
 								display: flex;
-								flex-direction: row !important;
-								align-items: center;
-								gap: 0.47rem;
-								> div {
-									display: flex;
-									flex-direction: column;
-									align-items: center;
-									gap: 0.1rem;
-									> img {
-										width: 1.02rem;
-										height: 1.02rem;
-									}
-									> span {
-										font-size: 0.14rem;
-										color: #999999;
-									}
+								flex-direction: column;
+								gap: 0.32rem;
+								> span {
+									font-size: 0.14rem;
+									color: #000;
+									line-height: 0.24rem;
 								}
 							}
 						}
@@ -249,9 +225,12 @@
 					justify-content: normal;
 
 					gap: 0.2rem;
-					> img {
-						width: 3.41rem;
-						height: 0.73rem;
+
+					> a {
+						> img {
+							width: 3.41rem;
+							height: 0.73rem;
+						}
 					}
 
 					.items {
@@ -331,9 +310,11 @@
 					justify-content: normal;
 
 					gap: 0.2rem;
-					> img {
-						width: 1.66rem;
-						height: 0.36rem;
+					> a {
+						> img {
+							width: 1.66rem;
+							height: 0.36rem;
+						}
 					}
 
 					.items {
@@ -355,16 +336,12 @@
 								line-height: 0.24rem;
 							}
 							.follow-qrcode {
-								gap: 0.17rem;
-								> div {
-									gap: 0.1rem;
-									> img {
-										width: 1.02rem;
-										height: 1.02rem;
-									}
-									> span {
-										font-size: 0.12rem;
-									}
+								display: flex;
+								flex-direction: column;
+								gap: 0.08rem;
+								> span {
+									font-size: 0.14rem;
+									line-height: 0.24rem;
 								}
 							}
 						}
