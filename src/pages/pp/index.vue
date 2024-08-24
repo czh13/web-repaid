@@ -266,7 +266,10 @@
 				<p>
 					If you have any questions about this notice, including any requests to exercise your legal rights, please contact us using the details set out below.
 				</p>
-				<p><a href="mailto:help@repaidhq.com" rel="noopener" target="_blank">Email address: help@repaidhq.com</a></p>
+				<p>
+					Email address:
+					<a href="mailto:help@repaidhq.com" rel="noopener" target="_blank">help@repaidhq.com</a>
+				</p>
 				<p>
 					You can also contact or complain to your local supervisory authority, however please consider contacting us first so that we can address your question
 					directly.

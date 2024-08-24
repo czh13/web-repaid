@@ -1,7 +1,7 @@
 <template>
 	<header class="header" :class="{ 'header-hidden': isLeaveTop }">
 		<div class="header-main">
-			<NuxtLink to="/"><img src="@/assets/images/logo.png" alt="logo" /></NuxtLink>
+			<NuxtLink to="/"><img src="@/assets/images/logo.png" alt="repaidLogo" /></NuxtLink>
 			<nav>
 				<div class="navs" :class="{ showNavs: isShowTab }">
 					<template v-for="nav in navs" :key="nav.title">
@@ -14,7 +14,7 @@
 				<div class="contactBtn">
 					<!-- <div class="contact" @click="handleTheme">切换</div> -->
 					<BaseButton :color="'#3ab12c'" :bg-color="'#fff'" @click="handleTab('about')">Contact Us</BaseButton>
-					<img src="@/assets/images/header_tab_icon.png" alt="" @click="handlShow" />
+					<img src="@/assets/images/header_tab_icon.png" alt="header_tab_icon" @click="handleShow" />
 				</div>
 			</nav>
 		</div>
@@ -50,7 +50,7 @@ const handleTab = (module: string) => {
 	})
 }
 
-const handlShow = () => {
+const handleShow = () => {
 	isShowTab.value = !isShowTab.value
 }
 

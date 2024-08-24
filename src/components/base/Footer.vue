@@ -3,8 +3,7 @@
 		<div class="footer-main">
 			<div>
 				<div class="footer-tab">
-					<NuxtLink to="/pp"><img src="@/assets/images/logo.png" alt="logo" /></NuxtLink>
-					<!-- <img src="@/assets/images/logo.png" alt="logo" /> -->
+					<NuxtLink to="/pp"><img src="@/assets/images/logo.png" alt="repaidLogo" /></NuxtLink>
 					<div class="items">
 						<div class="legal">
 							<span>Legal</span>
@@ -20,7 +19,7 @@
 						<div class="follow">
 							<span>Let's talk</span>
 							<div class="follow-qrcode">
-								<span>Find us on Telegram: +1936 240 8965</span>
+								<span>Find us on Telegram: +1 936 240 8965</span>
 								<span>Find us on WhatsApp: +1 352 287 3489</span>
 							</div>
 						</div>
